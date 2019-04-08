@@ -59,7 +59,7 @@
 				{
 					"id": 2,
 					"name": "show/shop",
-					"pathName": "pages/shop/shop/1",
+					"pathName": "pages/shop/shop",
 					"query": "",
 					"scene": null
 				},

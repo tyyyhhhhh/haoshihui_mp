@@ -22,12 +22,17 @@ Page({
     wx.request({
       url: "http://localhost:3000/api/v1/shops",
       method: "GET",
-      success(resp) {
-        page.setData({
-          shops: resp.data.shops
-        })
+      success(res) {
+        console.log(res)
+        const shops = res.data.shops;
+
+          // Update local data
+          page.setData({
+            shops: shops
+        });
+        wx.hideToast();
       }
-    })
+    });
 
     // Update local data
     this.setData(app.globalData)
@@ -35,11 +40,12 @@ Page({
 
 
   showShop(e) {
-    const data = e.currentTarget.dataset;
-    const shop = data.shop;
+    const dataset = e.currentTarget.dataset;
+    // console.log(data)
+    // const shop = data.shop;
 
     wx.navigateTo({
-      url: `../shop/shop?id=${shop.id}`
+      url: `../shop/shop?id=${dataset.shopId}`
     });
   },
 

@@ -23,6 +23,7 @@ Page({
       method: 'GET',
       success(res) {
         const shop = res.data;
+        console.log(shop)
 
         // Update local data
         that.setData(
