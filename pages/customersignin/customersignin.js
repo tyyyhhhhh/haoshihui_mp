@@ -8,17 +8,15 @@ Page({
   },
 
   bindSubmit: function (e) {
-    let customer = {
+    let user = {
       email: e.detail.value.email,
       password: e.detail.value.password,
-      name: e.detail.value.name,
-      wechat_id: e.detail.value.wechat_id
     }
 
     wx.request({
-      url: `http://localhost:3000/api/v1/customers`,
+      url: `http://localhost:3000/api/v1/sessions`,
       method: 'POST',
-      data: { customer: customer },
+      data: { user: user },
       success: res => {
         wx.navigateTo({
           url: '/pages/index/index'

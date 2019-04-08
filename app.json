@@ -1,16 +1,15 @@
 {
   "pages": [
-        "pages/shops/shops",
-        "pages/index/index",
+    "pages/shops/shops",
+    "pages/index/index",
     "pages/landing/landing",
-
     "pages/logs/logs",
-
     "pages/shop/shop",
     "pages/newshop/new",
     "shared/form",
     "pages/newcustomer/newcustomer",
-    "sharedlogin/sharedlogin"
+    "sharedlogin/sharedlogin",
+    "pages/customersignin/customersignin"
   ],
   "window": {
     "backgroundTextStyle": "light",
