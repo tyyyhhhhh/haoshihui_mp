@@ -1,0 +1,5 @@
+<!--pages/shopsignin/shopsignin.wxml-->
+<text>pages/shopsignin/shopsignin.wxml</text>
+
+<import src="/shared/form.wxml"/>
+<template is="form"/>

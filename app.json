@@ -9,7 +9,8 @@
     "shared/form",
     "pages/newcustomer/newcustomer",
     "sharedlogin/sharedlogin",
-    "pages/customersignin/customersignin"
+    "pages/customersignin/customersignin",
+    "pages/shopsignin/shopsignin"
   ],
   "window": {
     "backgroundTextStyle": "light",
