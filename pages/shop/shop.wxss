@@ -1,0 +1,49 @@
+/* pages/shop/shop.wxss */
+
+.banner-image {
+  background-image: url("https://loremflickr.com/320/240/bakery");
+  background-position: cover;
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+
+.order-card {
+  height: 100px;
+  margin: 20px; 
+  display: flex;
+  padding: 10px;
+  box-shadow: 0px 1px 1px grey;
+}
+
+.item-image {
+  background-image: url("https://loremflickr.com/320/240/bread");
+  height: 100px;
+  width: 100px;
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item-price-qty-box {
+  display: flex;
+  justify-content: space-between;
+  
+  width: 200px;
+}
+
+.qty-box {
+  display: flex;
+  
+}
+
+.add {
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+}

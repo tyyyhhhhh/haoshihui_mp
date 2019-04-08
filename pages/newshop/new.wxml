@@ -1,0 +1,8 @@
+<!--pages/createshop/create.wxml-->
+<view class="nav-bar">
+  <view>nav-bar</view>
+</view>
+
+<!--pages/new/new.wxml-->
+<import src="/shared/form.wxml"/>
+<template is="form"/>

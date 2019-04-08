@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 4,
 			"list": [
 				{
 					"id": 0,
@@ -52,6 +52,27 @@
 					"id": -1,
 					"name": "shops",
 					"pathName": "pages/shops/shops",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "show/shop",
+					"pathName": "pages/shop/shop",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "newshop",
+					"pathName": "pages/newshop/new",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "newcustomer",
+					"pathName": "pages/newcustomer/newcustomer",
 					"query": "",
 					"scene": null
 				}

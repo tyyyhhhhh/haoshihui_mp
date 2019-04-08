@@ -1,0 +1,3 @@
+<!--pages/newcustomer/newcustomer.wxml-->
+<import src="/sharedlogin/sharedlogin.wxml"/>
+<template is="form2"/>

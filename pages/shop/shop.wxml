@@ -1,0 +1,28 @@
+<!--pages/shop/shop.wxml-->
+<view class="banner-image">
+<view>Name of shop</view>
+</view>
+
+
+<view class="order-cards">
+  <view class="order-card">
+
+    <view class="item-image">image here</view>
+
+    <view class="item-info">
+      <view class="item-name">food item 1</view>
+
+      <view class="item-price-qty-box">
+        <view class="item-price">8 RMB</view>
+
+        <view class="qty-box">
+          <button class="add">-</button>
+          <view class="item-qty">2</view>
+          <button class="add" size="{{miniSize}}">+</button>
+        </view>
+
+      </view>
+
+    </view>
+  </view>
+</view> 

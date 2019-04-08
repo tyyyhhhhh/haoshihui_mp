@@ -3,7 +3,12 @@
     "pages/landing/landing",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/shops/shops"
+    "pages/shops/shops",
+    "pages/shop/shop",
+    "pages/newshop/new",
+    "shared/form",
+    "pages/newcustomer/newcustomer",
+    "sharedlogin/sharedlogin"
   ],
   "window": {
     "backgroundTextStyle": "light",

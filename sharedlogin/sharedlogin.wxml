@@ -1,0 +1,44 @@
+<!--sharedlogin/sharedlogin.wxml-->
+
+<template name="form2">
+
+<view class="header">
+  <view class="h2-header">New Signup</view>
+  </view>
+  <view class="container">
+  <view class="wrap">
+  
+    <form bindsubmit="bindSubmit">
+
+    <view class="user-input">
+      <view class="text-area-wrap">
+      <textarea value="{{name}}" style="input-size"placeholder="Name" class="input-height" name="name" maxlength="-1" auto-height />
+      </view>
+    </view>
+
+    <view class="user-input">
+      <view class="text-area-wrap">
+      <textarea value="{{wechat_id}}" style="input-size"placeholder="Wechat ID" class="input-height" name="wechat_id" maxlength="-1" auto-height />
+      </view>
+    </view>
+
+    <view class="user-input">
+      <view class="text-area-wrap">
+      <textarea value="{{email}}" style="input-size"placeholder="Email" class="input-height" name="email" maxlength="-1" auto-height />
+      </view>
+    </view>
+
+    <view class="user-input">
+      <view class="text-area-wrap">
+      <textarea value="{{password}}" password="true" style="input-size"placeholder="Password" class="input-height" name="password" maxlength="-1" auto-height />
+      </view>
+    </view>
+
+    <button  style="margin-bottom:50px "type="primary" form-type="submit" loading="{{loading}}">Submit</button>
+    </form>
+
+  </view>
+  </view>
+
+  </template>
+

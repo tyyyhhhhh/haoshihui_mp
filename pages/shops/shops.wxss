@@ -1,5 +1,9 @@
 /* pages/shops/shops.wxss */
 
+body {
+  background-color: lightgrey;
+}
+
 .nav-bar {
   background-color: lightseagreen;
   width: 100vw;
@@ -12,14 +16,19 @@
 }
 
 .shop-card {
-  border: 1px solid black;
+  box-shadow: 0px 1px 1px grey;
   height: 150px;
-  margin: 20px
+  margin: 20px;
 }
 
 .shop-image {
   background-image: url("https://loremflickr.com/320/240/bakery");
   background-position: cover;
   height: 100px;
+}
 
+.shop-info {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
 }

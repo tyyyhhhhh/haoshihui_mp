@@ -1,0 +1,9 @@
+/* pages/newshop/new.wxss */
+
+body {
+  background-color: pink;
+}
+
+.nav-bar {
+  background-color: lightseagreen;
+}
