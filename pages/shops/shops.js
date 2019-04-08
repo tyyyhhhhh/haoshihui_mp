@@ -1,66 +1,58 @@
 // pages/shops/shops.js
+var app = getApp()
+
 Page({
-
-  /**
-   * Page initial data
-   */
   data: {
-
+    loading: false,
   },
-
-  /**
-   * Lifecycle function--Called when page load
-   */
   onLoad: function (options) {
 
+    // Display toast when loading
+
+
+    wx.showToast({
+      title: 'Updating',
+      icon: 'success',
+      duration: 3000
+    });
+
+
+
+    const page = this;
+    wx.request({
+      url: "http://localhost:3000/api/v1/shops",
+      method: "GET",
+      success(resp) {
+        page.setData({
+          shops: resp.data.shops
+        })
+      }
+    })
+
+    // Update local data
+    this.setData(app.globalData)
   },
 
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
-  onReady: function () {
 
+  showShop(e) {
+    const data = e.currentTarget.dataset;
+    const shop = data.shop;
+
+    wx.navigateTo({
+      url: `../show/show?id=${shop.id}`
+    });
   },
 
-  /**
-   * Lifecycle function--Called when page show
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page hide
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page unload
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * Page event handler function--Called when user drop down
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * Called when page reach bottom
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * Called when user click on the top right corner to share
-   */
-  onShareAppMessage: function () {
-
+  bindSubmit: function (f) {
+    this.setData({
+      loading: !this.data.loading
+    });
+    var name = f.detail.value.name;
+    console.log(name)
+    if (this.data.shops.includes(name)) {
+      showShop(f)
+    }
   }
+
+
 })

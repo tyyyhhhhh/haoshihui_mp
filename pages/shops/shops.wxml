@@ -4,17 +4,18 @@
 </view>
 
 
-<view class="shop-cards">
+<view wx:for="{{shops}}" wx:for-item="shop" class="shop-cards">
   <view class="shop-card">
-    <view class="shop-image">
-
+    <view class="shop-image" style="background-image: url('{{shop.avatar_url}}')">
+    
     </view>
     <view class="shop-info">
       <view class="info-left">
-        <view>shop name here</view>
-        <view>opening hours: 1800-1900</view>
+        <view>{{shop.name}}</view>
+        <view>{{shop.opening_hours}}</view>
       </view>
       <view>8 RMB</view>
     </view>
   </view>
 </view>
+
