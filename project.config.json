@@ -15,7 +15,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.6.4",
 	"appid": "wxd614946cda48b721",
-	"projectname": "haoshihui",
+	"projectname": "haoshihui_mp",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 5,
 			"list": [
 				{
 					"id": 0,
@@ -74,6 +74,13 @@
 					"id": -1,
 					"name": "newcustomer",
 					"pathName": "pages/newcustomer/newcustomer",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "sharedlogin",
+					"pathName": "sharedlogin/sharedlogin",
 					"query": "",
 					"scene": null
 				}
