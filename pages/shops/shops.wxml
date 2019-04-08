@@ -1,0 +1,20 @@
+<!--pages/shops/shops.wxml-->
+<view class="nav-bar">
+  <view>location</view>
+</view>
+
+
+<view class="shop-cards">
+  <view class="shop-card">
+    <view class="shop-image">
+
+    </view>
+    <view class="shop-info">
+      <view class="info-left">
+        <view>shop name here</view>
+        <view>opening hours: 1800-1900</view>
+      </view>
+      <view>8 RMB</view>
+    </view>
+  </view>
+</view>

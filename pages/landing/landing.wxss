@@ -1,0 +1,13 @@
+/* pages/landing/landing.wxss */
+
+.choose-options {
+  display: flex;
+}
+
+.shop-admin {
+  background-color: lightgrey;
+}
+
+.customer {
+ background-color: grey;
+}

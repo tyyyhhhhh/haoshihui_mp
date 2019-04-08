@@ -1,0 +1,19 @@
+<!--pages/landing/landing.wxml-->
+
+
+
+<view class="container">
+<text>I am a...</text>
+  <view class="choose-options">
+    <view class="shop-admin">
+      <button bindtap="testFunction">shop admin</button>
+    </view>
+    <view class="customer">
+    <button bindtap="testFunction">customer</button>
+    </view>
+  </view>
+
+
+</view>
+
+
