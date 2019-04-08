@@ -22,7 +22,6 @@ body {
 }
 
 .shop-image {
-  background-image: url("https://loremflickr.com/320/240/bakery");
   background-position: cover;
   height: 100px;
 }
