@@ -1,4 +1,7 @@
 // pages/shop/shop.js
+var app = getApp()
+
+
 Page({
 
   /**
@@ -13,13 +16,37 @@ Page({
    */
   onLoad: function (options) {
 
+    const that = this;
+
+    wx.request({
+      url: `http://localhost:3000/api/v1/shops/${options.id}`,
+      method: 'GET',
+      success(res) {
+        const shop = res.data;
+
+        // Update local data
+        that.setData(
+          shop
+        );
+
+        wx.hideToast();
+      }
+    });
+
+    var shops = app.globalData.shops
+    let index = shops.findIndex(shop => shop.id.toString() === options.id);
+
+    // Update local data
+    this.setData(shops[index]);
   },
 
   /**
    * Lifecycle function--Called when page is initially rendered
    */
   onReady: function () {
-
+    wx.setNavigationBarTitle({
+      title: this.data.name || "Something",
+    });
   },
 
   /**

@@ -4,9 +4,16 @@
 </view>
 
 
-<view wx:for="{{shops}}" wx:for-item="shop" class="shop-cards">
-  <view class="shop-card">
-    <view class="shop-image" style="background-image: url('{{shop.avatar_url}}')">
+<view wx:for="{{shops}}" 
+wx:for-item="shop"
+wx:key="shop.id" 
+class="shop-cards" 
+data-shop="{{shop}}"
+bindtap="showShop" 
+ > 
+
+  <view class="shop-card" bindtap="showShop">
+    <view class="shop-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('{{shop.avatar_url}}')">
     
     </view>
     <view class="shop-info">

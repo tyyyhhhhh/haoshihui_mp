@@ -3,12 +3,13 @@
 .banner-image {
   background-image: url("https://loremflickr.com/320/240/bakery");
   background-position: cover;
-  height: 200px;
+  height: 80px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   color: white;
 }
+
 
 .order-card {
   height: 100px;

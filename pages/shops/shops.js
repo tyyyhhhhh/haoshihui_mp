@@ -39,7 +39,7 @@ Page({
     const shop = data.shop;
 
     wx.navigateTo({
-      url: `../show/show?id=${shop.id}`
+      url: `../shop/shop?id=${shop.id}`
     });
   },
 
