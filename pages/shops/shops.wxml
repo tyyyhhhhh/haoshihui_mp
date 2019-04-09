@@ -1,4 +1,5 @@
 <!--pages/shops/shops.wxml-->
+<view class="body">
 <view class="nav-bar">
   <view>location</view>
 </view>
@@ -11,15 +12,18 @@ class="shop-card"
 bindtap="showShop" 
 data-shop-id="{{shop.id}}"> 
   <view class="shop-card-diff">
-    <view class="shop-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('{{shop.avatar_url}}')"></view>
+    <view class="shop-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('{{shop.avatar_url}}')">
+    <view class="shop-name">{{shop.name}}</view>
+    </view>
     <view class="shop-info">
       <view class="info-left">
-        <view>{{shop.name}}</view>
-        <view>{{shop.opening_hours}}</view>
-        <view>{{shop.id}}</view>
+        
+        <view>Open: {{shop.opening_hours}}</view>
+        <view>Description: {{shop.description}}</view>
+        <view>Rating: {{shop.rating_from_dianping}}</view>
       </view>
-      <view>8 RMB</view>
     </view>
   </view>
 </view>
 
+</view>

@@ -33,9 +33,24 @@ Page({
         wx.hideToast();
       }
     });
+    wx.request({
+      url: `http://localhost:3000/api/v1/shops/${options.id}`,
+      method: "GET",
+      success(res) {
+        
+        const items = res.data.goods;
+        console.log(items)
+
+        // Update local data
+        that.setData({
+          items
+        });
+        wx.hideToast();
+      }
+    });
 
     var shops = app.globalData.shops
-    let index = shops.findIndex(shop => shop.id.toString() === options.id);
+
 
     // Update local data
     this.setData(shops[index]);

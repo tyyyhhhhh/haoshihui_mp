@@ -1,0 +1,7 @@
+<!--map/map.wxml-->
+
+
+<map id="myMap" show-location />
+
+<button type="primary" bindtap="getCenterLocation">Acquire position</button>
+<button type="primary" bindtap="moveToLocation">Recenter Map</button>

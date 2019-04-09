@@ -1,6 +1,6 @@
 /* pages/shops/shops.wxss */
 
-body {
+.body {
   background-color: lightgrey;
 }
 
@@ -12,22 +12,29 @@ body {
   justify-content: space-around;
 }
 
-.shop-cards {
-}
-
 .shop-card {
   box-shadow: 0px 1px 1px grey;
-  height: 150px;
+  height: 200px;
   margin: 20px;
+  background-color: white;
 }
 
 .shop-image {
   background-position: cover;
   height: 100px;
+  position: relative;
 }
 
 .shop-info {
   display: flex;
   justify-content: space-between;
   margin: 5px;
+}
+
+.shop-name {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  bottom: 10px;
+  left: 5px;
 }

@@ -40,7 +40,9 @@
 			"list": []
 		},
 		"miniprogram": {
+
 			"current": 7,
+
 			"list": [
 				{
 					"id": 0,
@@ -96,7 +98,13 @@
 					"name": "shopsignin",
 					"pathName": "pages/shopsignin/shopsignin",
 					"query": "",
-					"scene": null
+          "scene": null
+        },
+        {
+					"id": -1,
+					"name": "map",
+					"pathName": "map/map",
+          "scene": null
 				}
 			]
 		}
