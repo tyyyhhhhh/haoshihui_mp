@@ -3,10 +3,17 @@ const app = getApp()
 
 Page({
 
-  indexShops(e) {
+  customerSignUp(e) {
 
     wx.navigateTo({
-      url: '/pages/shops/shops'
+      url: '/pages/newcustomer/newcustomer'
+    });
+  },
+
+  customerSignIn(e) {
+
+    wx.navigateTo({
+      url: '/pages/customersignin/customersignin'
     });
   },
 

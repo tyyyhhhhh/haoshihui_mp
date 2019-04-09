@@ -39,7 +39,7 @@
 
 
 
-    <button  style="margin-bottom:50px "type="primary" form-type="submit" class="main-btn" loading="{{loading}}">Sign up</button>
+    <button bindtap="shopsPage" style="margin-bottom:50px "type="primary" form-type="submit" class="main-btn" loading="{{loading}}">Sign up</button>
     
     <navigator> <view class="h2-header">Already registered? Sign in</view></navigator>
 

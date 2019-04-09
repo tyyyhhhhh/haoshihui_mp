@@ -6,7 +6,7 @@ Page({
     loading: false,
   },
   onLoad: function (options) {
-
+    const page = this;
     // Display toast when loading
 
 
@@ -18,10 +18,14 @@ Page({
 
 
 
-    const page = this;
+    
     wx.request({
       url: "http://localhost:3000/api/v1/shops",
       method: "GET",
+      header: {
+        'X-Customer-Token': wx.getStorageSync('token'),
+        'X-Customer-Email': wx.getStorageSync('email')
+      },
       success(res) {
         console.log(res)
         const shops = res.data.shops;
