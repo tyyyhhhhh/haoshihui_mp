@@ -1,22 +1,35 @@
 // map/map.js
 Page({
-  onLoad: function () {
-    this.mapCtx = wx.createMapContext('myMap')
+  data: {
+    markers: [{
+      iconPath: "/images/pin.png",
+      id: 0,
+      latitude: 23.099994,
+      longitude: 113.324520,
+      width: 30,
+      height: 50
+    }],
+    polyline: [{
+      points: [{
+        longitude: 113.3245211,
+        latitude: 23.10229
+      }, {
+        longitude: 113.324520,
+        latitude: 23.21229
+      }],
+      color: "#FF0000DD",
+      width: 2,
+      dottedLine: true
+    }],
+
   },
-  getCenterLocation: function () {
-    this.mapCtx.getCenterLocation({
-      success: function (res) {
-        console.log(res.longitude)
-        console.log(res.latitude)
-      }
-    })
+  regionchange(e) {
+    console.log(e.type)
   },
-  moveToLocation: function () {
-    this.mapCtx.moveToLocation()
+  markertap(e) {
+    console.log(e.markerId)
   },
-  
-  onReady: function (e) {
-    // Use wx.createMapContext to acquire map context
-  
-}
+  controltap(e) {
+    console.log(e.controlId)
+  }
 })

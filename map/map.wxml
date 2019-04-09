@@ -1,6 +1,5 @@
 <!--map/map.wxml-->
 
-<button id="map-btn" bindtap="getCenterLocation" bindtap="moveToLocation">Refresh location</button>
-<view class="mapContainer"><map id="myMap" show-location /></view>
+<map id="map" longitude="113.324520" latitude="23.099994" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 300px;"></map>
 
 

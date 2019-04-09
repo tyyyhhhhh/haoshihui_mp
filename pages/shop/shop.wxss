@@ -1,33 +1,52 @@
 /* pages/shop/shop.wxss */
 
 .banner-image {
-  background-image: url("https://loremflickr.com/320/240/bakery");
   background-position: cover;
-  height: 80px;
+  height: 100px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   color: white;
 }
 
+.item-name {
+  color: black;
+  font-family: 'Open sans';
+  font-size: 14px;
+  font-weight: bolder; 
+}
 
+.right-side {
+ display: flex;
+ flex-direction: column;
+}
+
+.paraph {
+  color: black;
+  font-size: 10px;
+  font-family: 'Open sans'; 
+}
 .order-card {
   height: 100px;
-  margin: 20px; 
+  margin: 10px; 
   display: flex;
   padding: 10px;
   box-shadow: 0px 1px 1px grey;
+  background-color: white; 
 }
 
 .item-image {
-  background-image: url("https://loremflickr.com/320/240/bread");
   height: 100px;
   width: 100px;
 }
 
+.item-price {
+  color: black;
+  font-size: 10px;
+}
+
 .item-info {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
 }
 
@@ -47,4 +66,15 @@
   border-radius: 50%;
   height: 20px;
   width: 20px;
+}
+
+.banner {
+  color: white;
+  text-align: center;
+  height: 100vh-70px;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

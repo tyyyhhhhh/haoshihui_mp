@@ -1,8 +1,5 @@
 <!--pages/shops/shops.wxml-->
 <view class="body">
-<view class="nav-bar">
-  <view>location</view>
-</view>
 
 
 <view wx:for="{{shops}}" 
