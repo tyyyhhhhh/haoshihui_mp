@@ -1,18 +1,21 @@
 {
   "pages": [
-        "pages/shop/shop",
-        "pages/shops/shops",
-        "pages/index/index",
+    "pages/shop/shop",
+    "pages/shops/shops",
+    "pages/index/index",
     "pages/landing/landing",
-
     "pages/logs/logs",
-
-
     "pages/newshop/new",
     "shared/form",
     "pages/newcustomer/newcustomer",
-    "sharedlogin/sharedlogin"
+    "sharedlogin/sharedlogin",
+    "map/map"
   ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "Your location data will be used by this program"
+    }
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
