@@ -33,12 +33,14 @@
       {
         "pagePath": "pages/shops/shops",
         "text": "Shops",
-        "iconPath": "images/noun_home_2353419.png"
+        "iconPath": "images/nonselectedhome.png",
+        "selectedIconPath": "images/home.png"
       },
       {
         "pagePath": "map/map",
         "text": "Shops around you",
-        "iconPath": "images/map.png"
+        "iconPath": "images/nonselectedmap.png",
+        "selectedIconPath": "images/highlightedmap.png"
       }
     ]
   },

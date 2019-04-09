@@ -1,28 +1,23 @@
 <!--pages/shop/shop.wxml-->
 <view class="shop-banner">
-  <view class="banner-image"></view>
+  <view class="banner" style="background-image: url('{{avatar_url}}');">
   <view class="banner-info"> 
     <view>{{name}}</view>
     <view>{{description}}</view>
-  </view>
-</view>
-
-
-<view wx:for="{{items}}" wx:for-item="item" wx:key="item.id" class="order-cards">
+    <view wx:for="{{items}}" wx:for-item="item" wx:key="item.id" class="order-cards">
   <view class="order-card">
 
-    <view class="item-image">image here</view>
+
 
     <view class="item-info">
+    <view class="item-image" style="background-image: url('{{item.image_url}}');"></view>
+    <view class="right-side">
       <view class="item-name">{{item.name}}</view>
+      <text class="paraph">{{item.description}}</text>
 
       <view class="item-price-qty-box">
-        <view class="item-price">8 RMB</view>
+        <view class="item-price">{{item.original_price}} $$$</view>
 
-        <view class="qty-box">
-          <button class="add">-</button>
-          <view class="item-qty">2</view>
-          <button class="add" size="{{miniSize}}">+</button>
         </view>
 
       </view>
@@ -30,3 +25,8 @@
     </view>
   </view>
 </view> 
+  </view>
+</view>
+</view>
+
+
