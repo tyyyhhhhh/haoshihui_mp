@@ -4,12 +4,14 @@
 
 
 
+
 <view class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://st.focusedcollection.com/3839757/i/650/focused_178413852-stock-photo-asian-friends-taking-photos-food.jpg');">
   <view class="banner-content">
     <view class="h1">好食惠</view>
     <view class="tag">食而不费</view>
 <view class="header">
   <view class="h2-header">Sign up as a customer</view>
+
   </view>
   <view class="container">
   <view class="wrap">
@@ -18,16 +20,22 @@
 
     <view class="user-input">
       <view class="text-area-wrap">
+
       <textarea value="{{email}}" style="input-size"placeholder="Email" class="input-height" name="email" maxlength="-1" auto-height />
+
+
       </view>
     </view>
 
 
     <view class="user-input">
       <view class="text-area-wrap">
+
       <textarea value="{{password}}" style="input-size"placeholder="Password" class="input-height" name="password" maxlength="-1" auto-height />
+
       </view>
     </view>
+
 
 
 
@@ -35,9 +43,12 @@
     
     <navigator> <view class="h2-header">Already registered? Sign in</view></navigator>
 
+
     </form>
 
   </view>
   </view>
+
     </view>
   </view>
+
