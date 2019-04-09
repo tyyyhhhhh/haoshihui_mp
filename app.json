@@ -21,13 +21,13 @@
   ],
   "permission": {
     "scope.userLocation": {
-      "desc": "Your location data will be used by this program"
+      "desc": "Will use loc data"
     }
   },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "HaoShiHui",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json"
