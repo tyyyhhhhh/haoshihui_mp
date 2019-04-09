@@ -1,1 +1,17 @@
 /* map/map.wxss */
+#mapId{
+  height: 200px;
+}
+
+.mapContainer {
+display: flex;
+justify-content: center;
+height: 200px;
+}
+
+#map-btn {
+  margin: 10px;
+  padding: 0; 
+  background-color: #0099cc;
+  color: white; 
+}
