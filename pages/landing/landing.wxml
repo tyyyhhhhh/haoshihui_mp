@@ -4,7 +4,8 @@
   <view class="banner-content">
     <view class="h1">好食惠</view>
     <view class="tag">食而不费</view>
-    <button bindtap="indexShops">Let's Eat</button>
+    <button bindtap="indexShops">Sign Up</button>
+     <button bindtap="indexShops">Sign Up</button>
         <view class="button-location-view">
       <button class="button-location {{gotLocation ? 'hidden' : '' }}" type="warn" bindtap="listenerBtnGetLocation">Get location</button>
     </view>
