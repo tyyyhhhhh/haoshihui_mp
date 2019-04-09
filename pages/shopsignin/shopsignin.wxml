@@ -1,8 +1,12 @@
-<!--pages/newcustomer/newcustomer.wxml-->
-<import src="/sharedlogin/sharedlogin.wxml"/>
+<!--pages/createshop/create.wxml-->
+<view class="nav-bar">
+  <view>nav-bar</view>
+</view>
 
-<view class="header">
-  <view class="h2-header">Sign up for as a customer</view>
+<!--pages/new/new.wxml-->
+
+  <view class="header">
+  <view class="h2-header">Sign in for your Shop</view>
   </view>
   <view class="container">
   <view class="wrap">
@@ -24,7 +28,7 @@
 
 
 
-    <button  style="margin-bottom:50px "type="primary" form-type="submit" loading="{{loading}}">Sign up</button>
+    <button  style="margin-bottom:50px "type="primary" form-type="submit" loading="{{loading}}">Sign in</button>
     </form>
 
   </view>

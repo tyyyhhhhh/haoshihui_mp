@@ -4,5 +4,32 @@
 </view>
 
 <!--pages/new/new.wxml-->
-<import src="/shared/form.wxml"/>
-<template is="form"/>
+
+  <view class="header">
+  <view class="h2-header">Sign up for your Shop</view>
+  </view>
+  <view class="container">
+  <view class="wrap">
+  
+    <form bindsubmit="bindSubmit">
+
+    <view class="user-input">
+      <view class="text-area-wrap">
+      <textarea value="{{email}}" style="input-size"placeholder="email" class="input-height" name="email" maxlength="-1" auto-height />
+      </view>
+    </view>
+
+
+    <view class="user-input">
+      <view class="text-area-wrap">
+      <textarea value="{{password}}" style="input-size"placeholder="password" class="input-height" name="password" maxlength="-1" auto-height />
+      </view>
+    </view>
+
+
+
+    <button  style="margin-bottom:50px "type="primary" form-type="submit" loading="{{loading}}">Sign up</button>
+    </form>
+
+  </view>
+  </view>
