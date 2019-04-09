@@ -1,7 +1,6 @@
 // map/map.js
 Page({
-  onReady: function (e) {
-    // Use wx.createMapContext to acquire map context
+  onLoad: function () {
     this.mapCtx = wx.createMapContext('myMap')
   },
   getCenterLocation: function () {
@@ -14,5 +13,10 @@ Page({
   },
   moveToLocation: function () {
     this.mapCtx.moveToLocation()
-  }
+  },
+  
+  onReady: function (e) {
+    // Use wx.createMapContext to acquire map context
+  
+}
 })
