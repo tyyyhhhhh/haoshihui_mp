@@ -8,15 +8,15 @@ Page({
   },
 
   bindSubmit: function (e) {
-    let shop = {
+    let customer = {
       email: e.detail.value.email,
-      password: e.detail.value.password
+      password: e.detail.value.password,
     }
 
     wx.request({
-      url: `http://localhost:3000/api/v1/shops`,
+      url: `http://localhost:3000/api/v1/sessions`,
       method: 'POST',
-      data: { shop: shop },
+      data: { customer: customer },
       success: res => {
         console.log(res)
       }

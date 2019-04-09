@@ -1,66 +1,28 @@
-// pages/newcustomer/newcustomer.js
+var app = getApp()
 Page({
-
-  /**
-   * Page initial data
-   */
   data: {
-
+    loading: false,
   },
 
-  /**
-   * Lifecycle function--Called when page load
-   */
-  onLoad: function (options) {
-
+  onLoad: function () {
   },
 
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
-  onReady: function () {
+  bindSubmit: function (e) {
+    let customer = {
+      email: e.detail.value.email,
+      password: e.detail.value.password
+    }
 
-  },
-
-  /**
-   * Lifecycle function--Called when page show
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page hide
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page unload
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * Page event handler function--Called when user drop down
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * Called when page reach bottom
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * Called when user click on the top right corner to share
-   */
-  onShareAppMessage: function () {
-
+    wx.request({
+      url: `http://localhost:3000/api/v1/customers`,
+      method: 'POST',
+      data: { customer: customer },
+      success: res => {
+        console.log(res)
+      }
+    })
   }
 })
+
+
+

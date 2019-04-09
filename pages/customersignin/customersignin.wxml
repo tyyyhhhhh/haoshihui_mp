@@ -2,7 +2,7 @@
 <import src="/sharedlogin/sharedlogin.wxml"/>
 
 <view class="header">
-  <view class="h2-header">Sign up for as a customer</view>
+  <view class="h2-header">Sign in for as a customer</view>
   </view>
   <view class="container">
   <view class="wrap">
@@ -24,7 +24,7 @@
 
 
 
-    <button  style="margin-bottom:50px "type="primary" form-type="submit" loading="{{loading}}">Sign up</button>
+    <button  style="margin-bottom:50px "type="primary" form-type="submit" loading="{{loading}}">Sign in</button>
     </form>
 
   </view>
