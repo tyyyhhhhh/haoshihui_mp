@@ -10,9 +10,7 @@ Page({
   bindSubmit: function (e) {
     let customer = {
       email: e.detail.value.email,
-      password: e.detail.value.password,
-      name: e.detail.value.name,
-      wechat_id: e.detail.value.wechat_id
+      password: e.detail.value.password
     }
 
     wx.request({
@@ -20,9 +18,7 @@ Page({
       method: 'POST',
       data: { customer: customer },
       success: res => {
-        wx.navigateTo({
-          url: '/pages/index/index'
-        });
+        console.log(res)
       }
     })
   }

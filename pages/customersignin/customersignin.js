@@ -8,7 +8,7 @@ Page({
   },
 
   bindSubmit: function (e) {
-    let user = {
+    let customer = {
       email: e.detail.value.email,
       password: e.detail.value.password,
     }
@@ -16,11 +16,9 @@ Page({
     wx.request({
       url: `http://localhost:3000/api/v1/sessions`,
       method: 'POST',
-      data: { user: user },
+      data: { customer: customer },
       success: res => {
-        wx.navigateTo({
-          url: '/pages/index/index'
-        });
+        console.log(res)
       }
     })
   }

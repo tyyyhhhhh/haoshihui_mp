@@ -1,5 +1,35 @@
-<!--pages/shopsignin/shopsignin.wxml-->
-<text>pages/shopsignin/shopsignin.wxml</text>
+<!--pages/createshop/create.wxml-->
+<view class="nav-bar">
+  <view>nav-bar</view>
+</view>
 
-<import src="/shared/form.wxml"/>
-<template is="form"/>
+<!--pages/new/new.wxml-->
+
+  <view class="header">
+  <view class="h2-header">Sign in for your Shop</view>
+  </view>
+  <view class="container">
+  <view class="wrap">
+  
+    <form bindsubmit="bindSubmit">
+
+    <view class="user-input">
+      <view class="text-area-wrap">
+      <textarea value="{{email}}" style="input-size"placeholder="email" class="input-height" name="email" maxlength="-1" auto-height />
+      </view>
+    </view>
+
+
+    <view class="user-input">
+      <view class="text-area-wrap">
+      <textarea value="{{password}}" style="input-size"placeholder="password" class="input-height" name="password" maxlength="-1" auto-height />
+      </view>
+    </view>
+
+
+
+    <button  style="margin-bottom:50px "type="primary" form-type="submit" loading="{{loading}}">Sign in</button>
+    </form>
+
+  </view>
+  </view>
