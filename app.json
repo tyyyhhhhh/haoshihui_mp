@@ -24,6 +24,24 @@
       "desc": "Will use loc data"
     }
   },
+  "tabBar": {
+    "backgroundColor": "white",
+    "borderStyle": "black",
+    "selectedColor": "#D03232",
+    "color": "#888888",
+    "list": [
+      {
+        "pagePath": "pages/shops/shops",
+        "text": "Shops",
+        "iconPath": "images/noun_home_2353419.png"
+      },
+      {
+        "pagePath": "map/map",
+        "text": "Shops around you",
+        "iconPath": "images/map.png"
+      }
+    ]
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",

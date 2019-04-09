@@ -1,7 +1,6 @@
 <!--map/map.wxml-->
 
+<button id="map-btn" bindtap="getCenterLocation" bindtap="moveToLocation">Refresh location</button>
+<view class="mapContainer"><map id="myMap" show-location /></view>
 
-<map id="myMap" show-location />
 
-<button type="primary" bindtap="getCenterLocation">Acquire position</button>
-<button type="primary" bindtap="moveToLocation">Center Map</button>
