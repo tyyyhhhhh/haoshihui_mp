@@ -13,6 +13,11 @@
     "pages/newcustomer/newcustomer",
     "sharedlogin/sharedlogin"
   ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "Your location data will be used by this program"
+    }
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
