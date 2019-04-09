@@ -3,18 +3,18 @@
   <view class="banner-image"></view>
   <view class="banner-info"> 
     <view>{{name}}</view>
-    <view>description of shop</view>
+    <view>{{description}}</view>
   </view>
 </view>
 
 
-<view class="order-cards">
+<view wx:for="{{items}}" wx:for-item="item" wx:key="item.id" class="order-cards">
   <view class="order-card">
 
     <view class="item-image">image here</view>
 
     <view class="item-info">
-      <view class="item-name">food item 1</view>
+      <view class="item-name">{{item.name}}</view>
 
       <view class="item-price-qty-box">
         <view class="item-price">8 RMB</view>
