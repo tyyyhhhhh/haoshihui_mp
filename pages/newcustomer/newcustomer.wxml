@@ -31,7 +31,7 @@
     <view class="user-input">
       <view class="text-area-wrap">
 
-      <textarea value="{{password}}" style="input-size"placeholder="Password" class="input-height" name="password" maxlength="-1" auto-height />
+      <input value="{{password}}" password="{{true}}" style="input-size"placeholder="Password" class="input-height" name="password" maxlength="-1" auto-height />
 
       </view>
     </view>
