@@ -113,5 +113,21 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  addToCart: function () {
+    wx.openCard({
+      cardList: [
+        {
+          cardId: '',
+          code: ''
+        }, {
+          cardId: '',
+          code: ''
+        }
+      ],
+      success: function (res) {
+      }
+    })
   }
 })

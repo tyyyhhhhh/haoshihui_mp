@@ -8,6 +8,16 @@
   align-items: center;
   color: white;
 }
+.banner {
+  color: white;
+  text-align: center;
+  height: 100vh-70px;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .item-name {
   color: black;
@@ -19,6 +29,8 @@
 .right-side {
  display: flex;
  flex-direction: column;
+ width: 250px;
+ margin-top: 10px;
 }
 
 .paraph {
@@ -30,51 +42,39 @@
   height: 100px;
   margin: 10px; 
   display: flex;
-  padding: 10px;
-  box-shadow: 0px 1px 1px grey;
+  border-top: 1px dotted lightgrey;
   background-color: white; 
+  position: relative;
 }
 
 .item-image {
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
+  margin: 10px;
 }
 
 .item-price {
   color: black;
   font-size: 10px;
 }
-
-.item-info {
-  display: flex;
-  justify-content: space-between;
+.submit-tab {
+  background-color: lightseagreen;
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   width:100%;
 }
 
-.item-price-qty-box {
-  display: flex;
-  justify-content: space-between;
-  
-  width: 200px;
+.icon{
+  width: 30px;
+  height: 30px;
+
 }
 
-.qty-box {
-  display: flex;
-  
-}
-
-.add {
-  border-radius: 50%;
-  height: 20px;
+.add-button {
   width: 20px;
-}
-
-.banner {
-  color: white;
-  text-align: center;
-  height: 100vh-70px;
-  /* if you have a 70px navbar => height: calc(100vh - 70px); */
-  background-size: cover !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 20px;
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
 }
