@@ -4,8 +4,6 @@
   <input type="text" placeholder="Search food"></input>
 </view>
 
-<view class="body">
-
 
 
 <view wx:for="{{shops}}" 
@@ -31,3 +29,4 @@ data-shop-id="{{shop.id}}">
   </view>
 
 </view>
+
