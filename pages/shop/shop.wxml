@@ -7,6 +7,7 @@
     </view>
   </view>
 </view>
+
 <view wx:for="{{items}}" wx:for-item="item" wx:key="item.id" class="order-card">
     <view class="item-image" style="background-image: url('{{item.image_url}}');"></view>
    
@@ -15,8 +16,12 @@
       <text class="paraph">{{item.description}}</text>
       <view class="item-price">{{item.original_price}} $$$</view>
       <image src="/images/plus-button.svg" class="add-button" bindtap="addToCart"
+
           data-id="{{id}}" />
-    </view>
+      </view>
+  </view>
+  </view>
+  </view>
   </view>
 <view class="submit-tab">
   <image src="/images/shop-cart.png" class="icon" bindtap="addToCart" />
