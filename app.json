@@ -12,7 +12,11 @@
     "pages/customersignin/customersignin",
     "pages/shopsignin/shopsignin",
     "map/map",
+
     "pages/payment/payment"
+
+    "test/map-test"
+
   ],
   "permission": {
     "scope.userLocation": {

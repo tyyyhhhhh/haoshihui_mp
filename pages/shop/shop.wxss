@@ -31,6 +31,8 @@
  flex-direction: column;
  width: 250px;
  margin-top: 10px;
+
+ width: 150px;
 }
 
 .paraph {
@@ -51,6 +53,9 @@
   height: 80px;
   width: 80px;
   margin: 10px;
+
+  height: 90px;
+  width: 90px;
 }
 
 .item-price {
@@ -63,6 +68,12 @@
    left:0px;
    bottom:0px;
    width:100%;
+
+
+.item-info {
+  display: flex;
+  justify-content: space-between;
+  width: 280px; 
 }
 
 .icon{
@@ -77,4 +88,20 @@
   position: absolute;
   right: 10px;
   bottom: 5px;
+}
+
+.banner {
+  color: white;
+  text-align: center;
+  height: 100vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: bolder;
 }
