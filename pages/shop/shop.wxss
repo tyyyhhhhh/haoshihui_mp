@@ -19,6 +19,7 @@
 .right-side {
  display: flex;
  flex-direction: column;
+ width: 150px;
 }
 
 .paraph {
@@ -36,8 +37,8 @@
 }
 
 .item-image {
-  height: 100px;
-  width: 100px;
+  height: 90px;
+  width: 90px;
 }
 
 .item-price {
@@ -48,6 +49,7 @@
 .item-info {
   display: flex;
   justify-content: space-between;
+  width: 280px; 
 }
 
 .item-price-qty-box {
@@ -71,10 +73,15 @@
 .banner {
   color: white;
   text-align: center;
-  height: 100vh-70px;
+  height: 100vh;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: bolder;
 }

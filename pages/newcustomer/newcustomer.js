@@ -8,11 +8,19 @@ Page({
   onLoad: function () {
   },
 
-  bindSubmit: function (e) {
-    wx.setStorageSync('email', e.detail.value.email)
+  showPage(e) {
+    // console.log(data)
+    // const shop = data.shop;
+
+    wx.navigateTo({
+      url: `../shops/shops`
+    });},
+
+  bindSubmit: function (f) {
+    wx.setStorageSync('email', f.detail.value.email)
     let customer = {
-      email: e.detail.value.email,
-      password: e.detail.value.password
+      email: f.detail.value.email,
+      password: f.detail.value.password
     }
 
     let page = this;
@@ -28,10 +36,10 @@ Page({
         wx.reLaunch({
           url: '/pages/shops/shops',
         })
-      }
+        
+      },
     })
-  }
+  },
 })
-
 
 
