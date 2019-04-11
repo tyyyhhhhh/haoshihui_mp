@@ -1,4 +1,4 @@
-<!--map/map.wxml-->
+<!--test/map-test.wxml-->
     <view wx:for="{{shops}}" wx:for-item="shop"wx:key="shop.id">
     <view>{{shop.name}}</view>
     </view>
@@ -11,3 +11,4 @@
 
 
 
+  <view>{{markers}}</view>

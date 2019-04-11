@@ -2,8 +2,8 @@
 <view class="shop-banner">
   <view class="banner" style="background-image: url('{{avatar_url}}');">
   <view class="banner-info"> 
-    <view>{{name}}</view>
-    <view>{{description}}</view>
+    <view class="title">{{name}}</view>
+    <view class="subtitle">{{description}}</view>
     <view wx:for="{{items}}" wx:for-item="item" wx:key="item.id" class="order-cards">
   <view class="order-card">
 
