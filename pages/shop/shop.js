@@ -32,6 +32,7 @@ Page({
       data: order,
       success(res) {
         console.log(res),
+        wx.setStorageSync('order_id', res.data.order_id),
         wx.reLaunch({
           url: '/pages/payment/payment',
         })
