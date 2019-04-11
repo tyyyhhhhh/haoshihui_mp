@@ -19,14 +19,13 @@ data-shop-id="{{shop.id}}">
     <view class="shop-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('{{shop.avatar_url}}')">
     </view>
     <view class="shop-info">
-    <view class="shop-name h2">{{shop.name}}</view>
-      <view class="info-left">
-        
-        <view class="h4">Open: {{shop.opening_hours}}</view>
-        <view class="h4">Description: {{shop.description}}</view>
-        <view class="h4">Rating: {{shop.rating_from_dianping}}</view>
+      <view class="shop-name h2">{{shop.name}}</view>
+        <view class="info-left">
+          <view class="h4">Open: {{shop.opening_hours}}</view>
+          <view class="h4">Description: {{shop.description}}</view>
+          <view class="h4">Rating: {{shop.rating_from_dianping}}</view>
+        </view>
       </view>
-    </view>
   </view>
 </view>
 
