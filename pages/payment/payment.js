@@ -12,6 +12,33 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    const that = this;
+    const order_id = wx.getStorageSync('order_id');
+    const shop = wx.getStorageSync('shop');
+    that.setData(shop);
+    const customerEmail = wx.getStorageSync('email');
+    that.setData(customerEmail);
+    
+    wx.request({
+      url: `http://localhost:3000/api/v1/orders/${order_id}`,
+      method: 'GET',
+      header: {
+        'X-Customer-Token': wx.getStorageSync('token'),
+        'X-Customer-Email': wx.getStorageSync('email')
+      },
+      success(res) {
+        const order = res.data;
+        console.log(order);
+        that.setData(order);
+        const items = shop.items;
+        const pickedItemId = order.item_id - 1;
+        const pickedItem = items[pickedItemId];
+        that.setData(pickedItem);
+        
+        wx.hideToast();
+      }
+    });
+    
 
   },
 

@@ -57,7 +57,9 @@ Page({
       },
       success(res) {
         const shop = res.data;
-        console.log(shop)
+        console.log(shop);
+        wx.setStorageSync('shop', shop);
+        console.log(wx.getStorageSync('shop'));
 
         // Update local data
         that.setData(
@@ -76,7 +78,7 @@ Page({
       },
       success(res) {
         
-        const items = res.data.goods;
+        const items = res.data.items;
         console.log(items)
 
         // Update local data
