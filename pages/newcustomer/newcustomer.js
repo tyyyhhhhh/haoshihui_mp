@@ -33,6 +33,7 @@ Page({
         console.log(res)
         wx.setStorageSync('token', res.data.auth_token),
           console.log(wx.getStorageSync('token')),
+        wx.setStorageSync('customer_id', res.data.customer_id),
         wx.reLaunch({
           url: '/pages/shops/shops',
         })

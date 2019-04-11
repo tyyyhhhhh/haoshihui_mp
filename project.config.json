@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 9,
+			"current": 10,
 			"list": [
 				{
 					"id": 0,
@@ -110,6 +110,12 @@
 					"name": "testmap",
 					"pathName": "test/map-test",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "payment",
+					"pathName": "pages/payment/payment",
 					"scene": null
 				}
 			]

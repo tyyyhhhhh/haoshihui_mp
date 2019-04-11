@@ -11,6 +11,35 @@ Page({
 
   },
 
+  selectItem(e) {
+    const item_id = e.currentTarget.dataset.item.id
+    const customer_id = wx.getStorageSync("customer_id")
+    console.log(customer_id)
+    let order = {
+      item_id: item_id,
+      customer_id: customer_id,
+      booked: false,
+    }
+    console.log(order)
+    const that = this
+    wx.request({
+      url: `http://localhost:3000/api/v1/orders`,
+      method: 'POST',
+      header: {
+        'X-Customer-Token': wx.getStorageSync('token'),
+        'X-Customer-Email': wx.getStorageSync('email')
+      },
+      data: order,
+      success(res) {
+        console.log(res),
+        wx.reLaunch({
+          url: '/pages/payment/payment',
+        })
+      }
+    });
+
+  },
+
   /**
    * Lifecycle function--Called when page load
    */
