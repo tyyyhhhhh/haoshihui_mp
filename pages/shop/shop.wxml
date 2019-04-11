@@ -1,7 +1,6 @@
 <!--pages/shop/shop.wxml-->
 <view class="shop-banner">
   <view class="banner" style="background-image: url('{{avatar_url}}');">
-
     <view class="banner-info"> 
       <view class="title">{{name}}</view>
       <view class="paraph">{{description}}</view>
@@ -9,27 +8,21 @@
   </view>
 </view>
 
-  <view class="banner-info"> 
-    <view class="title">{{name}}</view>
-    <view class="subtitle">{{description}}</view>
-    <view wx:for="{{items}}" wx:for-item="item" wx:key="item.id" class="order-cards">
-  <view class="order-card">
-      <view wx:for="{{items}}" wx:for-item="item" wx:key="item.id" class="order-card">
-       <view class="item-image" style="background-image: url('{{item.image_url}}');"></view>
-         <view class="right-side">
-         <view class="item-name">{{item.name}}</view>
-         <text class="paraph">{{item.description}}</text>
-         <view class="item-price">{{item.original_price}} $$$</view>
-         <image src="/images/plus-button.svg" class="add-button" bindtap="addToCart"
+<view wx:for="{{items}}" wx:for-item="item" wx:key="item.id" class="order-card">
+    <view class="item-image" style="background-image: url('{{item.image_url}}');"></view>
+   
+    <view class="right-side">
+      <view class="item-name">{{item.name}}</view>
+      <text class="paraph">{{item.description}}</text>
+      <view class="item-price">{{item.original_price}} $$$</view>
+      <image src="/images/plus-button.svg" class="add-button" bindtap="addToCart"
+
           data-id="{{id}}" />
       </view>
   </view>
   </view>
   </view>
   </view>
-
 <view class="submit-tab">
   <image src="/images/shop-cart.png" class="icon" bindtap="addToCart" />
 </view>
-
-

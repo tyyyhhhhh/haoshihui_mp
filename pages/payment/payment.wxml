@@ -11,12 +11,13 @@
   <view class="shop-name h2">Shop name</view>
 
   <view class="order-card"> 
-    <view>testing</view>
-    <view class="item-image" style="background-image: url('{{item.image_url}}');"></view>
-    <view>
-    <view class="item-name">{{item.name}}</view>
-    <view class="item-price">$$$ {{item.original_price}} 
+    <view class="item-left">
+      <view class="item-image" style="background-image: url('{{item.image_url}}');">test</view>
+      <view class="item-name"> name {{item.name}}</view>
     </view>
+      
+      <view class="item-price">$$$ {{item.original_price}} 
+    
     </view>
   </view>
 
