@@ -107,6 +107,9 @@
 				},
 				{
 					"id": -1,
+					"name": "payment",
+					"pathName": "pages/payment/payment",
+					"query": "",
 					"name": "testmap",
 					"pathName": "test/map-test",
 					"scene": null

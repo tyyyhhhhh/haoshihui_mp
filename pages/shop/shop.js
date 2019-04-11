@@ -113,5 +113,9 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  addToCart: function () {
+   
   }
 })

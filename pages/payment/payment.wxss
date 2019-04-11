@@ -1,0 +1,46 @@
+/* pages/payment/payment.wxss */
+
+.topnav {
+  overflow: hidden;
+  background-color:lightseagreen;
+  padding: 8px;
+  
+}
+
+.customer-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.payment-summary {
+  box-shadow: 0px 1px 1px lightgrey;
+  margin: 20px;
+  height: 300px;
+}
+
+.icon{
+  width: 30px;
+  height: 30px;
+}
+
+
+.submit-tab {
+  background-color: lightseagreen;
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   width:100%;
+   height: 30px;
+}
+
+.shop-name {
+  border-bottom: 1px dotted black;
+  padding: 10px;
+}
+
+.order-card {
+  margin: 10px;
+  background-color: pink;
+  height: 40px;
+}
+

@@ -1,5 +1,11 @@
 <!--pages/shops/shops.wxml-->
+<view class="topnav">
+  <view class="active" href="#home">user's address</view>
+  <input type="text" placeholder="Search food"></input>
+</view>
+
 <view class="body">
+
 
 
 <view wx:for="{{shops}}" 
@@ -8,16 +14,17 @@ wx:key="shop.id"
 class="shop-card" 
 bindtap="showShop" 
 data-shop-id="{{shop.id}}"> 
+
   <view class="shop-card-diff">
     <view class="shop-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('{{shop.avatar_url}}')">
-    <view class="shop-name">{{shop.name}}</view>
     </view>
     <view class="shop-info">
+    <view class="shop-name h2">{{shop.name}}</view>
       <view class="info-left">
         
-        <view>Open: {{shop.opening_hours}}</view>
-        <view>Description: {{shop.description}}</view>
-        <view>Rating: {{shop.rating_from_dianping}}</view>
+        <view class="h4">Open: {{shop.opening_hours}}</view>
+        <view class="h4">Description: {{shop.description}}</view>
+        <view class="h4">Rating: {{shop.rating_from_dianping}}</view>
       </view>
     </view>
   </view>
