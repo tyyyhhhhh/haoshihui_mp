@@ -1,5 +1,10 @@
 // pages/payment/payment.js
+var app = getApp()
+
 Page({
+
+ 
+
 
   /**
    * Page initial data
@@ -13,14 +18,21 @@ Page({
    */
   onLoad: function (options) {
 
+    // Update local data
+
   },
 
   /**
    * Lifecycle function--Called when page is initially rendered
    */
   onReady: function () {
+    wx.setNavigationBarTitle({
+      title: this.data.name || "好食惠",
+    });
 
   },
+
+
 
   /**
    * Lifecycle function--Called when page show
@@ -64,3 +76,4 @@ Page({
 
   }
 })
+

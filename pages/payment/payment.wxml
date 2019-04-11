@@ -10,21 +10,25 @@
 <view class="payment-summary">
   <view class="shop-name h2">Shop name</view>
 
-  <view class="order-card"> 
-    <view class="item-left">
-      <view class="item-image" style="background-image: url('{{item.image_url}}');">test</view>
-      <view class="item-name"> name {{item.name}}</view>
-    </view>
-      
-      <view class="item-price">$$$ {{item.original_price}} 
-    
+  <view class="order-card" wx:for="{{orders}}" 
+wx:for-item="order"
+wx:key="order.id" 
+bindtap="showOrder" 
+data-shop-id="{{order.id}}"> 
+      <view class="item-image" style="background-image: url('https://loremflickr.com/cache/resized/7872_32376370267_71bb88519b_320_240_nofilter.jpg');"></view>
+      <view class="info-right">
+        <view class="item-name"> name {{order.item_id}}</view>
+        <view class="item-price">¥ {{order.booked}} 
+      </view>
     </view>
   </view>
 
+  <view class="sum-total">¥ sum total</view>
+
 </view>
 
-<view class="submit-tab">
-  <image src="/images/shop-cart.png" class="icon" bindtap="addToCart" />
-  
+<view class="submit-tab"> 
+  <view><image src="/images/shop-cart.png" class="icon" bindtap="addToCart" /></view>
+  <view class="payment-button">结算</view>
 </view>
 
