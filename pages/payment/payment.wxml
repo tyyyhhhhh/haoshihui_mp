@@ -3,7 +3,7 @@
   <view class="active" href="#home">{{shop.address}}</view>
   <view class="customer-info">
     <!-- <view >customer's name</view> -->
-    <view>{{customerEmail}}</view>
+    <view>{{email}}</view>
   </view>
 </view>
 
@@ -13,10 +13,10 @@
   <view class="order-card"> 
     <view class="item-left">
       <view class="item-image" style="background-image: url('{{item.image_url}}');">test</view>
-      <view class="item-name">{{pickedItem.name}}</view>
+      <view class="item-name">{{item.name}}</view>
     </view>
       
-      <view class="item-price">$$$ {{pickedItem.original_price}} 
+      <view class="item-price">$$$ {{item.original_price}} 
     
     </view>
   </view>

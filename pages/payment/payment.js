@@ -15,9 +15,11 @@ Page({
     const that = this;
     const order_id = wx.getStorageSync('order_id');
     const shop = wx.getStorageSync('shop');
-    that.setData(shop);
-    const customerEmail = wx.getStorageSync('email');
-    that.setData(customerEmail);
+    that.setData({shop:shop});
+    const item = wx.getStorageSync('item');
+    that.setData({ item: item });
+    const email = wx.getStorageSync('email');
+    that.setData({email:email});
     
     wx.request({
       url: `http://localhost:3000/api/v1/orders/${order_id}`,
@@ -28,13 +30,7 @@ Page({
       },
       success(res) {
         const order = res.data;
-        console.log(order);
         that.setData(order);
-        const items = shop.items;
-        const pickedItemId = order.item_id - 1;
-        const pickedItem = items[pickedItemId];
-        that.setData(pickedItem);
-        
         wx.hideToast();
       }
     });

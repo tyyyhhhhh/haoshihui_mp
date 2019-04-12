@@ -12,7 +12,9 @@ Page({
   },
 
   selectItem(e) {
-    const item_id = e.currentTarget.dataset.item.id
+    const item = e.currentTarget.dataset.item
+    const item_id = item.id
+    wx.setStorageSync('item', item)
     const customer_id = wx.getStorageSync("customer_id")
     console.log(customer_id)
     let order = {
