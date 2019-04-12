@@ -14,7 +14,7 @@ Page({
     }
 
     wx.request({
-      url: `http://localhost:3000/api/v1/sessions`,
+      url: `https://afternoon-beach-65796.herokuapp.com/api/v1/sessions`,
       method: 'POST',
       data: { shop: shop },
       success: res => {

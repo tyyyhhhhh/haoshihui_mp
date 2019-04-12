@@ -21,7 +21,7 @@ Page({
 
     
     wx.request({
-      url: "https://mighty-forest-60697.herokuapp.com/api/v1/shops",
+      url: "https://afternoon-beach-65796.herokuapp.com/api/v1/shops",
       method: "GET",
       header: {
         'X-Customer-Token': wx.getStorageSync('token'),

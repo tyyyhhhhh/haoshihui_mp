@@ -14,7 +14,7 @@ Page({
     }
 
     wx.request({
-      url: `https://mighty-forest-60697.herokuapp.com/api/v1/sessions`,
+      url: `https://afternoon-beach-65796.herokuapp.com/api/v1/sessions`,
       method: 'POST',
       data: { customer: customer },
       success: res => {
