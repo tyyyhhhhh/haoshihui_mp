@@ -1,6 +1,6 @@
 <!--pages/shops/shops.wxml-->
 <view class="topnav">
-  <view class="active" href="#home">user's address</view>
+  <view class="active adress" href="#home">delivering to {{address}}</view>
   <input type="text" placeholder="Search food"></input>
 </view>
 
@@ -20,8 +20,8 @@ data-shop-id="{{shop.id}}">
     <view class="shop-info">
       <view class="shop-name h2">{{shop.name}}</view>
         <view class="info-left">
-          <view class="h4">Open: {{shop.opening_hours}}</view>
-          <view class="h4">Description: {{shop.description}}</view>
+          <view class="h4 pickup">{{shop.opening_hours}}</view>
+          <view class="h4">{{shop.description}}</view>
           <view class="h4">Rating: {{shop.rating_from_dianping}}</view>
 
         </view>

@@ -8,6 +8,7 @@ Page({
   onLoad: function (options) {
     const page = this;
     // Display toast when loading
+    
 
 
     wx.showToast({
@@ -24,15 +25,18 @@ Page({
       method: "GET",
       header: {
         'X-Customer-Token': wx.getStorageSync('token'),
-        'X-Customer-Email': wx.getStorageSync('email')
+        'X-Customer-Email': wx.getStorageSync('email'),
+        'X-Customer-Address': wx.getStorageSync('address')
       },
       success(res) {
+        const address = wx.getStorageSync('address')
         console.log(res)
         const shops = res.data.shops;
 
           // Update local data
           page.setData({
-            shops: shops
+            shops: shops,
+            address: address
         });
         wx.hideToast();
       }

@@ -6,7 +6,9 @@
   padding: 8px;
   
 }
-
+.pickup {
+  font-weight: bolder;
+}
 .topnav input[type=text] {
   float: left;
   padding: 6px;
@@ -18,7 +20,11 @@
 
 .body {
 }
-
+.adress {
+  color: white;
+  font-size: 15px;
+  font-weight: bolder;
+}
 .shop-image {
   height: 100px;
   width: 100px;
