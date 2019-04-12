@@ -31,7 +31,6 @@
 .right-side {
  display: flex;
  flex-direction: column;
- width: 250px;
  margin-top: 10px;
 }
 
@@ -54,6 +53,7 @@
   height: 80px;
   width: 80px;
   margin: 10px;
+  background-size: cover !important;
 }
 
 .item-price {
