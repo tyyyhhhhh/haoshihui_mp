@@ -94,7 +94,7 @@ Page({
         const shops = res.data.shops;
         let markers = [];
 
-        shops.forEach(function (shop) {
+        shops.forEach(function(shop){
           markers.push({
             latitude: shop.latitude,
             longitude: shop.longitude,
@@ -104,20 +104,19 @@ Page({
             height: 30,
             name: shop.name
           })
-        }),
+          }),
           page.setData({
             shops: shops,
             markers: markers
           });
-        console.log(markers)
+          console.log(markers)
+        }}),
+
+        // Update local data
+
+        wx.hideToast();
       }
-    }),
+    });
 
-      // Update local data
-
-      wx.hideToast();
-  }
-});
-
-// Update local data
-//this.setData(app.globalData)
+    // Update local data
+    this.setData(app.globalData)

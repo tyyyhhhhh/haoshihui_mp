@@ -17,6 +17,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 15px;
+  padding-bottom: 25px;
 }
 
 .item-name {
@@ -63,6 +65,7 @@
    left:0px;
    bottom:0px;
    width:100%;
+
 }
 
 .icon{
@@ -77,4 +80,13 @@
   position: absolute;
   right: 10px;
   bottom: 5px;
+}
+
+.subtitle {
+  font-size: 13px;
+}
+
+.title {
+  font-weight: bolder;
+  padding: 5px;
 }

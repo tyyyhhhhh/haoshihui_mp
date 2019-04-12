@@ -11,6 +11,38 @@ Page({
 
   },
 
+  selectItem(e) {
+    const item = e.currentTarget.dataset.item
+    const item_id = item.id
+    wx.setStorageSync('item', item)
+    const customer_id = wx.getStorageSync("customer_id")
+    console.log(customer_id)
+    let order = {
+      item_id: item_id,
+      customer_id: customer_id,
+      booked: false,
+    }
+    console.log(order)
+    const that = this
+    wx.request({
+      url: `http://localhost:3000/api/v1/orders`,
+      method: 'POST',
+      header: {
+        'X-Customer-Token': wx.getStorageSync('token'),
+        'X-Customer-Email': wx.getStorageSync('email')
+      },
+      data: order,
+      success(res) {
+        console.log(res),
+        wx.setStorageSync('order_id', res.data.order_id),
+        wx.reLaunch({
+          url: '/pages/payment/payment',
+        })
+      }
+    });
+
+  },
+
   /**
    * Lifecycle function--Called when page load
    */
@@ -27,7 +59,9 @@ Page({
       },
       success(res) {
         const shop = res.data;
-        console.log(shop)
+        console.log(shop);
+        wx.setStorageSync('shop', shop);
+        console.log(wx.getStorageSync('shop'));
 
         // Update local data
         that.setData(
@@ -46,7 +80,7 @@ Page({
       },
       success(res) {
         
-        const items = res.data.goods;
+        const items = res.data.items;
         console.log(items)
 
         // Update local data
@@ -117,5 +151,11 @@ Page({
 
   addToCart: function () {
    
+  },
+  listenerBtnCall: function (e) {
+    wx.makePhoneCall({
+      phoneNumber: this.data.phone_number
+    })
   }
+
 })
