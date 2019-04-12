@@ -28,6 +28,7 @@
 .shop-image {
   height: 100px;
   width: 100px;
+  background-size: cover !important;
 }
 
 .shop-card-diff {
