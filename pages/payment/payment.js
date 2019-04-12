@@ -25,6 +25,8 @@ Page({
     that.setData({ item: item });
     const email = wx.getStorageSync('email');
     that.setData({email:email});
+    const customerAddress = wx.getStorageSync('address');
+    that.setData({ customerAddress: customerAddress });
     
     wx.request({
       url: `https://mighty-forest-60697.herokuapp.com/api/v1/orders/${order_id}`,

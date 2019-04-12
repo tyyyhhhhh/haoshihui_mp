@@ -1,12 +1,17 @@
-<!--pages/createshop/create.wxml-->
-<view class="nav-bar">
-  <view>nav-bar</view>
-</view>
+<!--pages/newcustomer/newcustomer.wxml-->
+<import src="/sharedlogin/sharedlogin.wxml"/>
 
-<!--pages/new/new.wxml-->
 
-  <view class="header">
-  <view class="h2-header">Sign in for your Shop</view>
+
+
+
+<view class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://st.focusedcollection.com/3839757/i/650/focused_178413852-stock-photo-asian-friends-taking-photos-food.jpg');">
+  <view class="banner-content">
+    <view class="h1">好食惠</view>
+    <view class="tag">食而不费</view>
+<view class="header">
+  <view class="h2-header">Sign up as a shop</view>
+
   </view>
   <view class="container">
   <view class="wrap">
@@ -15,21 +20,43 @@
 
     <view class="user-input">
       <view class="text-area-wrap">
-      <textarea value="{{email}}" style="input-size"placeholder="email" class="input-height" name="email" maxlength="-1" auto-height />
+
+      <textarea value="{{email}}" style="input-size"placeholder="Email" class="input-height" name="email" maxlength="-1" auto-height />
+
+
+      </view>
+    </view>
+        <view class="user-input">
+      <view class="text-area-wrap">
+
+      <!-- <input value="{{address}}" style="input-size"placeholder="Address" class="input-height" name="address" maxlength="-1" auto-height /> -->
+
       </view>
     </view>
 
 
     <view class="user-input">
       <view class="text-area-wrap">
-      <textarea value="{{password}}" style="input-size"placeholder="password" class="input-height" name="password" maxlength="-1" auto-height />
+
+      <input value="{{password}}" password="{{true}}" style="input-size"placeholder="Password" class="input-height" name="password" maxlength="-1" auto-height />
+
       </view>
     </view>
 
 
 
-    <button  style="margin-bottom:50px "type="primary" form-type="submit" loading="{{loading}}">Sign in</button>
+
+
+    <button bindtap="showPage" style="margin-bottom:50px "type="primary" form-type="submit" class="main-btn" loading="{{loading}}">Sign up</button>
+    
+    <navigator> <view class="h2-header"></view></navigator>
+
+
     </form>
 
   </view>
   </view>
+
+    </view>
+  </view>
+

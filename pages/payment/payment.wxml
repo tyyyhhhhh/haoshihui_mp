@@ -1,6 +1,6 @@
 <!--pages/payment/payment.wxml-->
 <view class="topnav">
-  <view class="active h2" href="#home">{{shop.address}}</view>
+  <view class="active h2" href="#home">Deliverying to {{customerAddress}}</view>
   <view class="customer-info">
     <!-- <view >customer's name</view> -->
     <view>{{email}}</view>

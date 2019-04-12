@@ -93,3 +93,8 @@
   width: 60px;
   padding:5px;
 }
+
+.item-price {
+  text-align: right;
+  padding: 10px;
+}
