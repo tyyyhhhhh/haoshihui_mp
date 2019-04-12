@@ -18,7 +18,7 @@
     <view class="right-side">
       <view class="item-name">{{item.name}}</view>
       <text class="paraph">{{item.description}}</text>
-      <view class="item-price">{{item.original_price}} $$$</view>
+      <view class="item-price">¥ {{item.original_price}}</view>
       <image src="/images/plus-button.svg" class="add-button" bindtap="addToCart"
 
           data-id="{{id}}" />

@@ -4,7 +4,15 @@
   overflow: hidden;
   background-color: #053C5E;
   padding: 8px;
+  display: flex;
+  justify-content: space-between;
   
+}
+.icon{
+  width: 25px;
+  height: 25px;
+  padding: 5px;
+
 }
 .pickup {
   font-weight: bolder;
@@ -24,6 +32,7 @@
   color: white;
   font-size: 15px;
   font-weight: bolder;
+  padding: 5px;
 }
 .shop-image {
   height: 100px;

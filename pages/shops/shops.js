@@ -5,6 +5,14 @@ Page({
   data: {
     loading: false,
   },
+  addShop(e) {
+    // console.log(data)
+    // const shop = data.shop;
+
+    wx.navigateTo({
+      url: `../newshop/new`
+    });
+  },
   onLoad: function (options) {
     const page = this;
     // Display toast when loading
