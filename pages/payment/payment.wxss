@@ -1,5 +1,6 @@
 /* pages/payment/payment.wxss */
 
+
 .topnav {
   overflow: hidden;
   background-color:lightseagreen;
@@ -16,21 +17,12 @@
   box-shadow: 0px 1px 1px lightgrey;
   margin: 20px;
   height: 300px;
+  position: relative;
 }
 
 .icon{
   width: 30px;
   height: 30px;
-}
-
-
-.submit-tab {
-  background-color: lightseagreen;
-   position:fixed;
-   left:0px;
-   bottom:0px;
-   width:100%;
-   height: 30px;
 }
 
 .shop-name {
@@ -40,18 +32,44 @@
 
 .order-card {
   margin: 10px;
-  background-color: pink;
-  height: 40px;
+  height: 30px;
   display: flex;
-  justify-content: space-between
+  padding: 5px;
 }
 
 .item-image {
-  height: 20px;
-  width: 20px;
+  height: 25px;
+  width: 25px;
+  background-size: cover;
 }
 
-.item-left {
+.info-right {
   display:flex;
-  padding: 10px;
+  justify-content: space-between;
+  width: 90%;
+  margin-left: 10px;
+}
+
+.submit-tab {
+  background-color: lightseagreen;
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   width:100%;
+   height: 30px;
+   display: flex;
+   justify-content: space-between;
+}
+
+.sum-total {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-weight: bold;
+}
+
+.payment-button {
+  background-color: gold;
+  text-align: center;
+  width: 60px;
 }

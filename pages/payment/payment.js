@@ -1,5 +1,10 @@
 // pages/payment/payment.js
+var app = getApp()
+
 Page({
+
+ 
+
 
   /**
    * Page initial data
@@ -22,7 +27,7 @@ Page({
     that.setData({email:email});
     
     wx.request({
-      url: `http://localhost:3000/api/v1/orders/${order_id}`,
+      url: `https://mighty-forest-60697.herokuapp.com/api/v1/orders/${order_id}`,
       method: 'GET',
       header: {
         'X-Customer-Token': wx.getStorageSync('token'),
@@ -36,14 +41,21 @@ Page({
     });
     
 
+    // Update local data
+
   },
 
   /**
    * Lifecycle function--Called when page is initially rendered
    */
   onReady: function () {
+    wx.setNavigationBarTitle({
+      title: this.data.name || "好食惠",
+    });
 
   },
+
+
 
   /**
    * Lifecycle function--Called when page show
@@ -87,3 +99,4 @@ Page({
 
   }
 })
+
