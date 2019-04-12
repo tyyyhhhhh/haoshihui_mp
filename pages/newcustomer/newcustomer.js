@@ -18,9 +18,12 @@ Page({
 
   bindSubmit: function (f) {
     wx.setStorageSync('email', f.detail.value.email)
+    wx.setStorageSync('address', f.detail.value.address)
+    console.log(f.detail.value.address)
     let customer = {
       email: f.detail.value.email,
-      password: f.detail.value.password
+      password: f.detail.value.password,
+      address: f.detail.value.address
     }
 
     let page = this;

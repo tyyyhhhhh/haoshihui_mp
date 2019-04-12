@@ -26,6 +26,13 @@
 
       </view>
     </view>
+        <view class="user-input">
+      <view class="text-area-wrap">
+
+      <input value="{{address}}" style="input-size"placeholder="Address" class="input-height" name="address" maxlength="-1" auto-height />
+
+      </view>
+    </view>
 
 
     <view class="user-input">
@@ -35,6 +42,7 @@
 
       </view>
     </view>
+
 
 
 
