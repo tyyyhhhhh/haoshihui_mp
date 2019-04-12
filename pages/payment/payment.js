@@ -27,7 +27,7 @@ Page({
     that.setData({email:email});
     
     wx.request({
-      url: `http://localhost:3000/api/v1/orders/${order_id}`,
+      url: `https://mighty-forest-60697.herokuapp.com/api/v1/orders/${order_id}`,
       method: 'GET',
       header: {
         'X-Customer-Token': wx.getStorageSync('token'),

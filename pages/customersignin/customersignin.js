@@ -14,7 +14,7 @@ Page({
     }
 
     wx.request({
-      url: `http://localhost:3000/api/v1/sessions`,
+      url: `https://mighty-forest-60697.herokuapp.com/api/v1/sessions`,
       method: 'POST',
       data: { customer: customer },
       success: res => {

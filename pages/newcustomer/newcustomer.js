@@ -26,7 +26,7 @@ Page({
     let page = this;
 
     wx.request({
-      url: `http://localhost:3000/api/v1/customers`,
+      url: `https://mighty-forest-60697.herokuapp.com/api/v1/customers`,
       method: 'POST',
       data: { customer: customer },
       success: res => {

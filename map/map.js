@@ -83,7 +83,7 @@ Page({
 
 
     wx.request({
-      url: "http://localhost:3000/api/v1/shops",
+      url: "https://mighty-forest-60697.herokuapp.com/api/v1/shops",
       method: "GET",
       header: {
         'X-Customer-Token': wx.getStorageSync('token'),
