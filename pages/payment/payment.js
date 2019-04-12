@@ -97,6 +97,23 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
+  PayNow(e) {
+    wx.switchTab({
+        url: `../shops/shops`
+      });
+   
+  wx.showToast({
+    title: 'Payment 成功',
+    icon: 'success',
+    duration: 7000
+  })
+
+  },
+  
+  
+
+  
 })
 
