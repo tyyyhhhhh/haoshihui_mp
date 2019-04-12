@@ -16,17 +16,21 @@
   <view class="order-card"> 
     <view class="item-image" style="background-image: url('{{item.image_url}}');"></view>
     <view class="info-right">
-      <view class="item-name h6">{{item.name}}</view></view>
-      <view class="item-price h6">¥{{item.original_price}} </view>
+      <view class="item-name h5">{{item.name}}</view>
+    </view>
+    
+     
   </view>
+   <view class="item-price h5">Original Price: ¥ {{item.original_price}} </view>
+      <view class="item-price h5">Discount Price: ¥ {{item.discount_price}} </view>
 
-  <view class="sum-total">¥ {{item.original_price}}</view>
+  <view class="sum-total">Total price: ¥ {{item.discount_price}}</view>
 
 </view>
 
 <view class="submit-tab"> 
   <view><image src="/images/shop-cart.png" class="icon"  /></view>
-  <view class="payment-button" bindtap="PayNow">结算</view>
+  <view class="payment-button" bindtap="PayNow">下单</view>
 </view>
 
 </view>

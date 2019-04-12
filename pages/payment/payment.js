@@ -105,7 +105,7 @@ Page({
       });
    
   wx.showToast({
-    title: 'Payment 成功',
+    title: '下单成功',
     icon: 'success',
     duration: 7000
   })
