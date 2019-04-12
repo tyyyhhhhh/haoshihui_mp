@@ -1,33 +1,33 @@
 <!--pages/payment/payment.wxml-->
 <view class="topnav">
-  <view class="active" href="#home">{{shop.address}}</view>
+  <view class="active h2" href="#home">{{shop.address}}</view>
   <view class="customer-info">
     <!-- <view >customer's name</view> -->
     <view>{{email}}</view>
   </view>
 </view>
 
+<view class="banner" style="background-image:url('/images/background.jpg');">
+
 <view class="payment-summary">
   <view class="shop-name h2">{{shop.name}}</view>
 
 
   <view class="order-card"> 
-    <view class="item-left">
-      <view class="item-image" style="background-image: url('{{item.image_url}}');">test</view>
-      <view class="item-name">{{item.name}}</view>
-    </view>
-      
-      <view class="item-price">$$$ {{item.original_price}} 
-    
-    </view>
+    <view class="item-image" style="background-image: url('{{item.image_url}}');"></view>
+    <view class="info-right">
+      <view class="item-name h6">{{item.name}}</view></view>
+      <view class="item-price h6">¥{{item.original_price}} </view>
   </view>
 
-  <view class="sum-total">¥ sum total</view>
+  <view class="sum-total">¥ {{item.original_price}}</view>
 
 </view>
 
 <view class="submit-tab"> 
-  <view><image src="/images/shop-cart.png" class="icon" bindtap="addToCart" /></view>
-  <view class="payment-button">结算</view>
+  <view><image src="/images/shop-cart.png" class="icon"  /></view>
+  <view class="payment-button" bindtap="PayNow">结算</view>
+</view>
+
 </view>
 
