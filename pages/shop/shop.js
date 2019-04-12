@@ -25,7 +25,7 @@ Page({
     console.log(order)
     const that = this
     wx.request({
-      url: `http://localhost:3000/api/v1/orders`,
+      url: `https://mighty-forest-60697.herokuapp.com/api/v1/orders`,
       method: 'POST',
       header: {
         'X-Customer-Token': wx.getStorageSync('token'),
@@ -51,7 +51,7 @@ Page({
     const that = this;
 
     wx.request({
-      url: `http://localhost:3000/api/v1/shops/${options.id}`,
+      url: `https://mighty-forest-60697.herokuapp.com/api/v1/shops/${options.id}`,
       method: 'GET',
       header: {
         'X-Customer-Token': wx.getStorageSync('token'),
@@ -72,7 +72,7 @@ Page({
       }
     });
     wx.request({
-      url: `http://localhost:3000/api/v1/shops/${options.id}`,
+      url: `https://mighty-forest-60697.herokuapp.com/api/v1/shops/${options.id}`,
       method: "GET",
       header: {
         'X-Customer-Token': wx.getStorageSync('token'),
