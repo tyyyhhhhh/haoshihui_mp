@@ -1,6 +1,6 @@
 <!--pages/shops/shops.wxml-->
 <view class="topnav">
-  <view class="active adress" href="#home">delivering to {{address}}</view>
+  <view class="active adress" href="#home">Delivering to {{address}}</view>
   <input type="text" placeholder="Search food"></input>
 </view>
 
