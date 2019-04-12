@@ -1,9 +1,12 @@
 /* pages/newshop/new.wxss */
+.banner {
+  color: white;
+  height: 100vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
 
-body {
-  background-color: pink;
 }
 
-.nav-bar {
+.main-btn {
   background-color: lightseagreen;
 }

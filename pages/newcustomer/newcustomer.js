@@ -14,7 +14,8 @@ Page({
 
     wx.navigateTo({
       url: `../shops/shops`
-    });},
+    });  
+  },
 
   bindSubmit: function (f) {
     wx.setStorageSync('email', f.detail.value.email)
