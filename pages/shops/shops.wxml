@@ -21,6 +21,7 @@ data-shop-id="{{shop.id}}">
       <view class="shop-name h2">{{shop.name}}</view>
         <view class="info-left">
           <view class="h4 pickup">{{shop.opening_hours}}</view>
+          <view class="h4">{{shop.address}}</view>
           <view class="h4">{{shop.description}}</view>
           <view class="h4">Rating: {{shop.rating_from_dianping}}</view>
 
