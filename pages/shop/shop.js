@@ -151,5 +151,11 @@ Page({
 
   addToCart: function () {
    
+  },
+  listenerBtnCall: function (e) {
+    wx.makePhoneCall({
+      phoneNumber: this.data.phone_number
+    })
   }
+
 })
