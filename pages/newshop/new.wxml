@@ -1,9 +1,10 @@
 <view class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('/images/res_owner.jpg');">
 
   <view class="header">
-  <view class="h2-header">Submit your Restaurant</view>
+
   </view>
   <view class="container">
+  <view class="h2-header">Submit your Shop</view>
   <view class="wrap">
   
     <form bindsubmit="bindSubmit">
@@ -45,7 +46,7 @@
       </view>
     </view>
 
-   <button bindtap="showPage" style="margin-bottom:50px "type="primary" form-type="submit" class="main-btn" loading="{{loading}}">Submit</button>
+   <button bindtap="showPage" style="margin-bottom:50px"  form-type="submit" class="main-btn" loading="{{loading}}">Submit</button>
 
 </form>
   </view>
