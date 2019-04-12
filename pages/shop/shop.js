@@ -12,7 +12,9 @@ Page({
   },
 
   selectItem(e) {
-    const item_id = e.currentTarget.dataset.item.id
+    const item = e.currentTarget.dataset.item
+    const item_id = item.id
+    wx.setStorageSync('item', item)
     const customer_id = wx.getStorageSync("customer_id")
     console.log(customer_id)
     let order = {
@@ -57,7 +59,9 @@ Page({
       },
       success(res) {
         const shop = res.data;
-        console.log(shop)
+        console.log(shop);
+        wx.setStorageSync('shop', shop);
+        console.log(wx.getStorageSync('shop'));
 
         // Update local data
         that.setData(
@@ -76,7 +80,7 @@ Page({
       },
       success(res) {
         
-        const items = res.data.goods;
+        const items = res.data.items;
         console.log(items)
 
         // Update local data

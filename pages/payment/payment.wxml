@@ -1,19 +1,19 @@
 <!--pages/payment/payment.wxml-->
 <view class="topnav">
-  <view class="active" href="#home">shop's address</view>
+  <view class="active" href="#home">{{shop.address}}</view>
   <view class="customer-info">
-    <view >customer's name</view>
-    <view>customer's email</view>
+    <!-- <view >customer's name</view> -->
+    <view>{{email}}</view>
   </view>
 </view>
 
 <view class="payment-summary">
-  <view class="shop-name h2">Shop name</view>
+  <view class="shop-name h2">{{shop.name}}</view>
 
   <view class="order-card"> 
     <view class="item-left">
       <view class="item-image" style="background-image: url('{{item.image_url}}');">test</view>
-      <view class="item-name"> name {{item.name}}</view>
+      <view class="item-name">{{item.name}}</view>
     </view>
       
       <view class="item-price">$$$ {{item.original_price}} 
