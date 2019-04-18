@@ -1,3 +1,4 @@
+import eventListener from "../../eventListener.js";
 // pages/shops/shops.js
 var app = getApp()
 
@@ -15,6 +16,7 @@ Page({
   },
   onLoad: function (options) {
     const page = this;
+    eventListener("Shops onLoad", this.route)
     // Display toast when loading
     
 
@@ -59,6 +61,9 @@ Page({
     const dataset = e.currentTarget.dataset;
     // console.log(data)
     // const shop = data.shop;
+    
+      eventListener("showShopClicked", this.route, dataset.shopId)
+    
 
     wx.navigateTo({
       url: `../shop/shop?id=${dataset.shopId}`

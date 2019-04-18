@@ -1,14 +1,30 @@
+import eventListener from "../../eventListener.js";
+
 var app = getApp()
+
 Page({
   data: {
     loading: false,
   },
 
-
-  onLoad: function () {
+  onEmailClicked: function(e) {
+     
+    eventListener("emailClicked", this.route)
+  },
+  onAddressClicked: function (e) {
+    eventListener("addressClicked", this.route)
+  },
+  onPasswordClicked: function (e) {
+    eventListener("passwordClicked", this.route)
   },
 
-  showPage(e) {
+  onLoad: function () {
+    console.log(this.route)
+    eventListener("newCustomer onLoad", this.route)
+
+  },
+
+  showPage: function(e) {
     // console.log(data)
     // const shop = data.shop;
 
@@ -18,6 +34,7 @@ Page({
   },
 
   bindSubmit: function (f) {
+    console.log(f)
     wx.setStorageSync('email', f.detail.value.email)
     wx.setStorageSync('address', f.detail.value.address)
     console.log(f.detail.value.address)
@@ -28,6 +45,7 @@ Page({
     }
 
     let page = this;
+    console.log(page)
 
     wx.request({
       url: `https://afternoon-beach-65796.herokuapp.com/api/v1/customers`,
