@@ -1,4 +1,6 @@
 // pages/payment/payment.js
+import eventListener from "../../eventListener.js";
+
 var app = getApp()
 
 Page({
@@ -18,6 +20,8 @@ Page({
    */
   onLoad: function (options) {
     const that = this;
+    eventListener("Payment onLoad", this.route);
+
     const order_id = wx.getStorageSync('order_id');
     const shop = wx.getStorageSync('shop');
     that.setData({shop:shop});
@@ -102,6 +106,8 @@ Page({
   },
 
   PayNow(e) {
+    eventListener("Payment confirmed", this.route);
+
     wx.switchTab({
         url: `../shops/shops`
       });

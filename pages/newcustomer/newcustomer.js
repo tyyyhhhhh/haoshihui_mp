@@ -1,8 +1,12 @@
+import eventListener from "../../eventListener.js";
+
 var app = getApp()
+
 Page({
   data: {
     loading: false,
   },
+
 
   getUserInfo: function (e) {
     console.log(e)
@@ -18,6 +22,12 @@ Page({
       avatarUrl: userInfo.avatarUrl,
     };
     console.log(user);
+
+
+
+
+
+
     wx.request({
       url: `http://localhost:3000/api/v1/users/${wx.getStorageSync('userId')}`,
       method: 'PUT',
@@ -44,8 +54,10 @@ Page({
 
 
   onLoad: function () {
-  },
+    console.log(this.route)
+    eventListener("newCustomer onLoad", this.route)
 
+  }
 
   // bindSubmit: function (f) {
   //   wx.setStorageSync('email', f.detail.value.email)
