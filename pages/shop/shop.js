@@ -1,4 +1,6 @@
 // pages/shop/shop.js
+import eventListener from "../../eventListener.js";
+
 var app = getApp()
 
 
@@ -16,12 +18,15 @@ Page({
     const item_id = item.id
     wx.setStorageSync('item', item)
     const customer_id = wx.getStorageSync("customer_id")
-    console.log(customer_id)
+    const shop = wx.getStorageSync('shop');
+
+    console.log(e.currentTarget)
     let order = {
       item_id: item_id,
       customer_id: customer_id,
       booked: false,
     }
+    eventListener("selectItem", this.route, shop.id, item.id)
     console.log(order)
     const that = this
     wx.request({
@@ -58,7 +63,7 @@ Page({
         'X-Customer-Email': wx.getStorageSync('email')
       },
       success(res) {
-        const shop = res.data;
+        const SHOP = res.data;
         console.log(shop);
         wx.setStorageSync('shop', shop);
         console.log(wx.getStorageSync('shop'));
