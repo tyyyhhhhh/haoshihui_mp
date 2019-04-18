@@ -1,9 +1,8 @@
 {
   "pages": [
-    "pages/newcustomer/newcustomer",
     "pages/shops/shops",
+    "pages/newcustomer/newcustomer",
     "pages/index/index",
-    "pages/landing/landing",
     "pages/logs/logs",
     "pages/shop/shop",
     "pages/newshop/new",

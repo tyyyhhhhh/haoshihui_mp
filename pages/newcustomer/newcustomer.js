@@ -14,7 +14,7 @@ Page({
 
     wx.navigateTo({
       url: `../shops/shops`
-    });  
+    });
   },
 
   bindSubmit: function (f) {
@@ -30,7 +30,7 @@ Page({
     let page = this;
 
     wx.request({
-      url: `https://afternoon-beach-65796.herokuapp.com/api/v1/customers`,
+      url: `https://haoshihui.wogengapp.cn/api/v1/customers`,
       method: 'POST',
       data: { customer: customer },
       success: res => {
@@ -41,10 +41,9 @@ Page({
         wx.reLaunch({
           url: '/pages/shops/shops',
         })
-        
+
       },
     })
   },
 })
-
 

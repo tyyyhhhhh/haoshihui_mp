@@ -83,7 +83,7 @@ Page({
 
 
     wx.request({
-      url: "http://localhost:3000/api/v1/shops",
+      url: "http://haoshihui.wogengapp.cn/api/v1/shops",
       method: "GET",
       header: {
         'X-Customer-Token': wx.getStorageSync('token'),
@@ -116,7 +116,7 @@ Page({
 
         wx.hideToast();
       }
-    });
+});
 
     // Update local data
-    this.setData(app.globalData)
+    // this.setData(app.globalData)

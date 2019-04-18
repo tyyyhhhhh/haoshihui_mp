@@ -25,7 +25,7 @@ Page({
     console.log(order)
     const that = this
     wx.request({
-      url: `https://afternoon-beach-65796.herokuapp.com/api/v1/orders`,
+      url: `https://haoshihui.wogengapp.cn/api/v1/orders`,
       method: 'POST',
       header: {
         'X-Customer-Token': wx.getStorageSync('token'),
@@ -51,7 +51,7 @@ Page({
     const that = this;
 
     wx.request({
-      url: `https://afternoon-beach-65796.herokuapp.com/api/v1/shops/${options.id}`,
+      url: `https://haoshihui.wogengapp.cn/api/v1/shops/${options.id}`,
       method: 'GET',
       header: {
         'X-Customer-Token': wx.getStorageSync('token'),
@@ -72,7 +72,7 @@ Page({
       }
     });
     wx.request({
-      url: `https://afternoon-beach-65796.herokuapp.com/api/v1/shops/${options.id}`,
+      url: `https://haoshihui.wogengapp.cn/api/v1/shops/${options.id}`,
       method: "GET",
       header: {
         'X-Customer-Token': wx.getStorageSync('token'),
@@ -95,7 +95,7 @@ Page({
 
 
     // Update local data
-    this.setData(shops[index]);
+    //this.setData(shops[index]);
   },
 
   /**

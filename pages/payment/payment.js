@@ -29,7 +29,7 @@ Page({
     that.setData({ customerAddress: customerAddress });
     
     wx.request({
-      url: `https://afternoon-beach-65796.herokuapp.com/api/v1/orders/${order_id}`,
+      url: `https://haoshihui.wogengapp.cn/api/v1/orders/${order_id}`,
       method: 'GET',
       header: {
         'X-Customer-Token': wx.getStorageSync('token'),

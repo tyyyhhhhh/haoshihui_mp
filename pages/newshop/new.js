@@ -39,7 +39,7 @@ Page({
     let page = this;
 
     wx.request({
-      url: `https://afternoon-beach-65796.herokuapp.com.com/api/v1/shops`,
+      url: `https://haoshihui.wogengapp.cn/api/v1/shops`,
       method: 'POST',
       header: {
         'X-Customer-Token': wx.getStorageSync('token'),

@@ -25,11 +25,9 @@ Page({
       duration: 3000
     });
 
-
-
     
     wx.request({
-      url: "https://afternoon-beach-65796.herokuapp.com/api/v1/shops",
+      url: "https://haoshihui.wogengapp.cn/api/v1/shops",
       method: "GET",
       header: {
         'X-Customer-Token': wx.getStorageSync('token'),
@@ -46,6 +44,7 @@ Page({
             shops: shops,
             address: address
         });
+
         wx.hideToast();
       }
     });
