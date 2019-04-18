@@ -8,13 +8,13 @@ App({
         console.log(res)
         wx.request({
           url: host + 'login',
-          method: 'post',
+          method: 'POST',
           data: {
             code: res.code
           },
           success: (res) => {
             console.log(res)
-            this.globalData.userId = res.data.userId
+            wx.setStorageSync('userId', res.data.userId)
           }
         })
       }

@@ -23,7 +23,7 @@
 
 
 
-    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" bindtap="showPage" style="margin-bottom:50px "type="primary" form-type="submit" class="main-btn" loading="{{loading}}">LOGIN</button>
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" style="margin-bottom:50px "type="primary" form-type="submit" class="main-btn" loading="{{loading}}">LOGIN</button>
     
     <navigator> <view class="h2-header">Already registered? Sign in</view></navigator>
 
