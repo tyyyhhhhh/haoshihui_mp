@@ -10,11 +10,12 @@ Page({
 
   getUserInfo: function (e) {
     console.log(e)
-    const userInfo = e.detail.userInfo;
+    let userInfo = e.detail.userInfo;
+    
     wx.setStorageSync('userInfo', userInfo);
     let user = {
-      userId: wx.getStorageSync('userId'),
-      openId: wx.getStorageSync('openId'),
+      // id: wx.getStorageSync('user_id'),
+      // open_id: wx.getStorageSync('open_id'),
       nickName: userInfo.nickName,
       gender: userInfo.gender, 
       language: userInfo.language,
@@ -24,30 +25,37 @@ Page({
       avatarUrl: userInfo.avatarUrl,
     };
 
-    eventListener("newCustomer", this.route, user => JSON.stringify(user))
+    eventListener("newCustomer", this.route)
     console.log(user);
 
+    let userExists = wx.getStorageSync('hasRegistered')
+
+    if(userExists) {
+      wx.reLaunch({
+        url: '/pages/shops/shops',
+      })
+    } else {
+      console.log("Updating user info")
+      wx.request({
+        url: `https://haoshihui.wogengapp.cn/api/v1/users/${wx.getStorageSync('user_id')}`,
+        method: 'PUT',
+        header: {
+          'X-Customer-Token': wx.getStorageSync('token'),
+          'X-Customer-Email': wx.getStorageSync('email')
+        },
+        data: { user: user },
+        success: res => {
+          console.log(res)
+          wx.setStorageSync('hasRegistered', true)
+          wx.reLaunch({
+            url: '/pages/shops/shops',
+          })
+        },
+      })
+    }
 
 
-
-
-
-    wx.request({
-      url: `http://localhost:3000/api/v1/users/${wx.getStorageSync('userId')}`,
-      method: 'PUT',
-      header: {
-        'X-Customer-Token': wx.getStorageSync('token'),
-        'X-Customer-Email': wx.getStorageSync('email')
-      },
-      data: { user: user },
-      success: res => {
-        console.log(res)
-
-        wx.reLaunch({
-          url: '/pages/shops/shops',
-        })
-      },
-    })
+   
   },
    
     // app.globalData.userInfo = e.detail.userInfo
@@ -62,34 +70,6 @@ Page({
     eventListener("newCustomer onLoad", this.route)
 
   }
-
-  // bindSubmit: function (f) {
-  //   wx.setStorageSync('email', f.detail.value.email)
-  //   wx.setStorageSync('address', f.detail.value.address)
-  //   console.log(f.detail.value.address)
-  //   let customer = {
-  //     email: f.detail.value.email,
-  //     password: f.detail.value.password,
-  //     address: f.detail.value.address
-  //   }
-
-  //   let page = this;
-
-  //   wx.request({
-  //     url: `https://haoshihui.wogengapp.cn/api/v1/customers`,
-  //     method: 'POST',
-  //     data: { customer: customer },
-  //     success: res => {
-  //       console.log(res)
-  //       wx.setStorageSync('token', res.data.auth_token),
-  //         console.log(wx.getStorageSync('token')),
-  //       wx.setStorageSync('customer_id', res.data.customer_id),
-  //       wx.reLaunch({
-  //         url: '/pages/shops/shops',
-  //       })
-
-  //     },
-  //   })
-  // },
+  
 })
 
