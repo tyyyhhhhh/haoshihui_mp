@@ -1,7 +1,7 @@
 //app.js
 App({
   onLaunch: function () {
-    const host = 'http://localhost:3000/'
+    const host = 'https://haoshihui.wogengapp.cn/'
     console.log('processing to login')
     wx.login({
       success: (res) => {
@@ -14,7 +14,8 @@ App({
           },
           success: (res) => {
             console.log(res)
-            wx.setStorageSync('userId', res.data.userId)
+            wx.setStorageSync('user_id', res.data.user_id)
+            wx.setStorageSync('open_id', res.data.open_id)
           }
         })
       }
