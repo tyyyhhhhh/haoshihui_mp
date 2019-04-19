@@ -13,6 +13,8 @@ Page({
     const userInfo = e.detail.userInfo;
     wx.setStorageSync('userInfo', userInfo);
     let user = {
+      userId: wx.getStorageSync('userId'),
+      openId: wx.getStorageSync('openId'),
       nickName: userInfo.nickName,
       gender: userInfo.gender, 
       language: userInfo.language,
@@ -21,6 +23,8 @@ Page({
       country: userInfo.country,
       avatarUrl: userInfo.avatarUrl,
     };
+
+    eventListener("newCustomer", this.route, user => JSON.stringify(user))
     console.log(user);
 
 

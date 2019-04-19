@@ -1,5 +1,5 @@
-export default function eventListener(eventName, page, shop, item) {
-  let url ="http://localhost:4000/api/v1/events"
+export default function eventListener(eventName, page, shop, item, user) {
+  let url ="http://localhost:3000/api/v1/events"
   let thisPage = page
   console.log(thisPage)
   var date = new Date();
@@ -12,7 +12,8 @@ export default function eventListener(eventName, page, shop, item) {
     description: eventName,
     page: thisPage,
     shop_id: shop,
-    item_id :item
+    item_id: item,
+    user: user
   }
 
   console.log(event)
