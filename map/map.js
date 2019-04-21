@@ -1,4 +1,7 @@
 // map.js
+import eventListener from "../eventListener.js";
+
+
 const app = getApp()
 
 Page({
@@ -20,6 +23,10 @@ Page({
     // Use wx.createMapContext to acquire map context
 
   },
+  onHide: function (e) {
+    eventListener("Left the app ", this.route)
+  },
+
 
 
 

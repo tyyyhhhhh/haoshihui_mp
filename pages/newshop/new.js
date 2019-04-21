@@ -6,6 +6,9 @@ Page({
 
   onLoad: function () {
   },
+  onHide: function (e) {
+    eventListener("Left the app ", this.route)
+  },
 
   showPage(e) {
     // console.log(data)

@@ -54,6 +54,10 @@ Page({
     // Update local data
     this.setData(app.globalData)
   },
+  onHide: function (e) {
+    const page = this;
+    eventListener("Left the app ", this.route)
+  },
 
 
   showShop(e) {

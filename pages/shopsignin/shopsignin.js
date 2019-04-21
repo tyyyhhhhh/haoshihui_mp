@@ -1,7 +1,12 @@
 var app = getApp()
+import eventListener from "../../eventListener.js";
+
 Page({
   data: {
     loading: false,
+  },
+  onHide: function (e) {
+    eventListener("Left the app ", this.route)
   },
 
   onLoad: function () {

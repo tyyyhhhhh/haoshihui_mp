@@ -122,8 +122,9 @@ Page({
   /**
    * Lifecycle function--Called when page hide
    */
-  onHide: function () {
-
+  onHide: function (e) {
+    const page = this;
+    eventListener("Left the app ", this.route)
   },
 
   /**

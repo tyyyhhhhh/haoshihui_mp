@@ -57,6 +57,12 @@ Page({
 
    
   },
+  onHide: function (e) {
+    const page = this;
+    eventListener("Left the app ", this.route)
+  },
+
+  
    
     // app.globalData.userInfo = e.detail.userInfo
     // this.setData({
