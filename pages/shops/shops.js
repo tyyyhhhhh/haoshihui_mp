@@ -14,6 +14,11 @@ Page({
       url: `../newshop/new`
     });
   },
+
+  onHide: function () {
+    eventListener("customerLeft", this.route)
+  },
+  
   onLoad: function (options) {
     const page = this;
     eventListener("Shops onLoad", this.route)

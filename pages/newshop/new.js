@@ -5,6 +5,11 @@ Page({
   },
 
   onLoad: function () {
+    eventListener("newShop onLoad", this.route)
+  },
+
+  onHide: function () {
+    eventListener("customerLeft", this.route)
   },
 
   showPage(e) {

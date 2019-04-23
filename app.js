@@ -1,5 +1,7 @@
 //app.js
+import eventListener from "/eventListener.js";
 App({
+
   onLaunch: function () {
     const host = 'https://haoshihui.wogengapp.cn/'
     console.log('processing to login')

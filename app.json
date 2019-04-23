@@ -2,21 +2,11 @@
   "pages": [
     "pages/newcustomer/newcustomer",
     "pages/shops/shops",
-    "pages/index/index",
     "pages/logs/logs",
     "pages/shop/shop",
     "pages/newshop/new",
-    "shared/form",
-    
-    "sharedlogin/sharedlogin",
-    "pages/customersignin/customersignin",
-    "pages/shopsignin/shopsignin",
     "map/map",
-
-    "pages/payment/payment",
-
-    "test/map-test"
-
+    "pages/payment/payment"
   ],
   "permission": {
     "scope.userLocation": {
