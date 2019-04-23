@@ -7,11 +7,6 @@ Page({
     loading: false,
   },
 
-  onHide: function () {
-    eventListener("customerLeft", this.route)
-  },
-
-
   getUserInfo: function (e) {
     console.log(e)
     let userInfo = e.detail.userInfo;

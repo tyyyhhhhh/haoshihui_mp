@@ -13,10 +13,6 @@ Page({
 
   },
 
-  onHide: function () {
-    eventListener("customerLeft", this.route)
-  },
-
   selectItem(e) {
     const item = e.currentTarget.dataset.item
     const item_id = item.id

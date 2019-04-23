@@ -2,6 +2,10 @@
 import eventListener from "/eventListener.js";
 App({
 
+  onHide: function () {
+    eventListener("customerLeft", this.route)
+  },
+
   onLaunch: function () {
     const host = 'https://haoshihui.wogengapp.cn/'
     console.log('processing to login')
