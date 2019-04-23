@@ -14,17 +14,11 @@ Page({
       url: `../newshop/new`
     });
   },
-
-  onHide: function () {
-    eventListener("customerLeft", this.route)
-  },
   
   onLoad: function (options) {
     const page = this;
     eventListener("Shops onLoad", this.route)
     // Display toast when loading
-    
-
 
     wx.showToast({
       title: 'Updating',
@@ -32,7 +26,6 @@ Page({
       duration: 3000
     });
 
-    
     wx.request({
       url: "https://haoshihui.wogengapp.cn/api/v1/shops",
       method: "GET",

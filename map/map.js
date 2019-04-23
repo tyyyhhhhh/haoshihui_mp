@@ -17,13 +17,8 @@ Page({
     console.log(e.controlId)
   },
   onReady: function (e) {
-    // Use wx.createMapContext to acquire map context
-
+    
   },
-  onHide: function () {
-    eventListener("customerLeft", this.route)
-  },
-
 
 
   listenerBtnGetLocation: function (e) {
