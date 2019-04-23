@@ -7,6 +7,10 @@ Page({
     loading: false,
   },
 
+  onHide: function () {
+    eventListener("customerLeft", this.route)
+  },
+
 
   getUserInfo: function (e) {
     console.log(e)
@@ -68,8 +72,8 @@ Page({
   onLoad: function () {
     console.log(this.route)
     eventListener("newCustomer onLoad", this.route)
-
   }
+
   
 })
 

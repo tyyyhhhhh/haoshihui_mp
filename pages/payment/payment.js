@@ -15,6 +15,10 @@ Page({
 
   },
 
+  onHide: function () {
+    eventListener("customerLeft", this.route)
+  },
+
   /**
    * Lifecycle function--Called when page load
    */

@@ -13,6 +13,10 @@ Page({
 
   },
 
+  onHide: function () {
+    eventListener("customerLeft", this.route)
+  },
+
   selectItem(e) {
     const item = e.currentTarget.dataset.item
     const item_id = item.id
@@ -52,6 +56,7 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    eventListener("Shop onLoad", this.route)
 
     const that = this;
 

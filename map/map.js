@@ -1,4 +1,4 @@
-// map.js
+import eventListener from "../eventListener.js";
 const app = getApp()
 
 Page({
@@ -19,6 +19,9 @@ Page({
   onReady: function (e) {
     // Use wx.createMapContext to acquire map context
 
+  },
+  onHide: function () {
+    eventListener("customerLeft", this.route)
   },
 
 
@@ -57,6 +60,7 @@ Page({
   },
 
   onLoad: function (options) {
+    eventListener("map onLoad", this.route)
     const page = this;
     // Display toast when loading
 
@@ -71,7 +75,7 @@ Page({
 
 
     wx.request({
-      url: "https://afternoon-beach-65796.herokuapp.com/api/v1/shops",
+      url: "https://haoshihui.wogengapp.cn/api/v1/shops",
       method: "GET",
       header: {
         'X-Customer-Token': wx.getStorageSync('token'),

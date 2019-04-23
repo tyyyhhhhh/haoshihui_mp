@@ -1,8 +1,4 @@
 <!--pages/newcustomer/newcustomer.wxml-->
-<import src="/sharedlogin/sharedlogin.wxml"/>
-
-
-
 
 
 <view class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://st.focusedcollection.com/3839757/i/650/focused_178413852-stock-photo-asian-friends-taking-photos-food.jpg');">
@@ -11,22 +7,15 @@
     <view class="tag">食而不费</view>
 <view class="header">
  
-
   </view>
   <view class="container">
   <view class="wrap">
   
     <form bindsubmit="bindSubmit">
 
-
-
-
-
-
     <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" style="margin-bottom:50px "type="primary" form-type="submit" class="main-btn" loading="{{loading}}">LOGIN</button>
     
-    <navigator> <view class="h2-header">Already registered? Sign in</view></navigator>
-
+    <navigator> <view class="h2-header">Discount Food& Reduce Waste</view></navigator>
 
     </form>
 
@@ -35,4 +24,3 @@
 
     </view>
   </view>
-
