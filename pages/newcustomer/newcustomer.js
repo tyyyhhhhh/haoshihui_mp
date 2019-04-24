@@ -14,7 +14,7 @@ Page({
     
     wx.setStorageSync('userInfo', userInfo);
     let user = {
-      // id: wx.getStorageSync('user_id'),
+      id: wx.getStorageSync('user_id'),
       // open_id: wx.getStorageSync('open_id'),
       nickName: userInfo.nickName,
       gender: userInfo.gender, 
@@ -25,7 +25,7 @@ Page({
       avatarUrl: userInfo.avatarUrl,
     };
 
-    eventListener("newCustomer", this.route)
+    eventListener("newCustomer", this.route, user.id)
     console.log(user);
 
     let userExists = wx.getStorageSync('hasRegistered')
@@ -59,7 +59,11 @@ Page({
   },
   onHide: function (e) {
     const page = this;
-    eventListener("Left the app ", this.route)
+    eventListener("customerLeft", this.route)
+  },
+  onShow: function (e) {
+    const page = this;
+    eventListener("Opened the app", this.route)
   },
 
   
