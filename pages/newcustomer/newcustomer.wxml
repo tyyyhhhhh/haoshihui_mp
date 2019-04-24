@@ -11,7 +11,7 @@
   <view class="container">
   <view class="wrap">
   
-    <form bindsubmit="bindSubmit">
+    <form>
 
     <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" style="margin-bottom:50px "type="primary" form-type="submit" class="main-btn" loading="{{loading}}">LOGIN</button>
     

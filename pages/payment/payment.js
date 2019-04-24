@@ -5,12 +5,6 @@ var app = getApp()
 
 Page({
 
- 
-
-
-  /**
-   * Page initial data
-   */
   data: {
 
   },
@@ -20,8 +14,6 @@ Page({
    */
   onLoad: function (options) {
     const that = this;
-    eventListener("Payment onLoad", this.route);
-
     const order_id = wx.getStorageSync('order_id');
     const shop = wx.getStorageSync('shop');
     that.setData({shop:shop});
@@ -46,9 +38,6 @@ Page({
       }
     });
     
-
-    // Update local data
-
   },
 
   /**
@@ -62,24 +51,14 @@ Page({
   },
 
 
-
-  /**
-   * Lifecycle function--Called when page show
-   */
   onShow: function () {
-
+    eventListener("onShow", this.route)
   },
 
-  /**
-   * Lifecycle function--Called when page hide
-   */
   onHide: function () {
 
   },
 
-  /**
-   * Lifecycle function--Called when page unload
-   */
   onUnload: function () {
 
   },

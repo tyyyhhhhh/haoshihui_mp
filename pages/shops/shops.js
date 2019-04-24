@@ -3,12 +3,13 @@ import eventListener from "../../eventListener.js";
 var app = getApp()
 
 Page({
+  onShow: function () {
+    eventListener("onShow", this.route)
+  },
   data: {
     loading: false,
   },
   addShop(e) {
-    // console.log(data)
-    // const shop = data.shop;
 
     wx.navigateTo({
       url: `../newshop/new`
@@ -17,9 +18,7 @@ Page({
   
   onLoad: function (options) {
     const page = this;
-    eventListener("Shops onLoad", this.route)
-    // Display toast when loading
-
+  
     wx.showToast({
       title: 'Updating',
       icon: 'success',
@@ -49,19 +48,13 @@ Page({
       }
     });
 
-    // Update local data
     this.setData(app.globalData)
   },
 
 
   showShop(e) {
     const dataset = e.currentTarget.dataset;
-    // console.log(data)
-    // const shop = data.shop;
-    
-      eventListener("showShopClicked", this.route, dataset.shopId)
-    
-
+   
     wx.navigateTo({
       url: `../shop/shop?id=${dataset.shopId}`
     });

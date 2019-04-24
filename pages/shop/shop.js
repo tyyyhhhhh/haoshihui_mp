@@ -3,12 +3,8 @@ import eventListener from "../../eventListener.js";
 
 var app = getApp()
 
-
 Page({
 
-  /**
-   * Page initial data
-   */
   data: {
 
   },
@@ -52,10 +48,8 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    eventListener("Shop onLoad", this.route)
 
     const that = this;
-
     wx.request({
       url: `https://haoshihui.wogengapp.cn/api/v1/shops/${options.id}`,
       method: 'GET',
@@ -117,7 +111,7 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-
+    eventListener("onShow", this.route)
   },
 
   /**
