@@ -35,7 +35,7 @@ Page({
       },
       success(res) {
         const address = wx.getStorageSync('address')
-        console.log(res)
+        //console.log(res)
         const shops = res.data.shops;
 
           // Update local data

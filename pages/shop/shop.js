@@ -16,14 +16,14 @@ Page({
     const customer_id = wx.getStorageSync("customer_id")
     const shop = wx.getStorageSync('shop');
 
-    console.log(e.currentTarget)
+    //console.log(e.currentTarget)
     let order = {
       item_id: item_id,
       customer_id: customer_id,
       booked: false,
     }
     // eventListener("selectItem", this.route, shop.id, item.id)
-    console.log(order)
+    //console.log(order)
     const that = this
     wx.request({
       url: `https://haoshihui.wogengapp.cn/api/v1/orders`,
@@ -34,7 +34,7 @@ Page({
       },
       data: order,
       success(res) {
-        console.log(res),
+        //console.log(res),
         wx.setStorageSync('order_id', res.data.order_id),
         wx.reLaunch({
           url: '/pages/payment/payment',
@@ -81,7 +81,7 @@ Page({
       success(res) {
         
         const items = res.data.items;
-        console.log(items)
+        //console.log(items)
 
         // Update local data
         that.setData({

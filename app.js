@@ -3,7 +3,7 @@ import eventListener from "/eventListener.js";
 App({
 
   onHide: function () {
-    console.log("onHideApp")
+    //console.log("onHideApp")
     eventListener("customerLeft", this.route)
   },
 
@@ -11,9 +11,9 @@ App({
     if(wx.getStorageSync('hasRegistered')) {
       console.log("User has registered, dont log event")
     } else {
-      eventListener("UniqueNewCustomerOnShow", this.route)
+      eventListener("NewCustomerOnShow", this.route)
     }
-    console.log("onShowApp")
+    //console.log("onShowApp")
   },
 
   onLaunch: function () {
