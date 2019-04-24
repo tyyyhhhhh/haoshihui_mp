@@ -22,7 +22,7 @@ Page({
       customer_id: customer_id,
       booked: false,
     }
-    eventListener("selectItem", this.route, shop.id, item.id)
+    // eventListener("selectItem", this.route, shop.id, item.id)
     console.log(order)
     const that = this
     wx.request({
