@@ -1,7 +1,7 @@
 <!--pages/shops/shops.wxml-->
 <view class="topnav">
-  <view class="active adress" href="#home">Delivering to {{address}}</view>
-  <image src="/images/plus.png" class="icon" bindtap="addShop" />
+  <view class="active adress" href="#home">Welcome to Haoshihui</view>
+  <!-- <image src="/images/plus.png" class="icon" bindtap="addShop" /> -->
 </view>
 
 

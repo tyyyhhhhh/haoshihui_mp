@@ -24,9 +24,6 @@ Page({
       avatarUrl: userInfo.avatarUrl,
     };
 
-    eventListener("newCustomer", this.route)
-    console.log(user);
-
     let userExists = wx.getStorageSync('hasRegistered')
 
     if(userExists) {
@@ -57,16 +54,8 @@ Page({
    
   },
    
-    // app.globalData.userInfo = e.detail.userInfo
-    // this.setData({
-    //   userInfo: e.detail.userInfo
-    // })
-  
-
-
-  onLoad: function () {
-    console.log(this.route)
-    eventListener("newCustomer onLoad", this.route)
+  onShow: function () {
+    eventListener("onShow", this.route)
   }
 
   

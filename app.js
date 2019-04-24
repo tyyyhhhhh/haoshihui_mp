@@ -11,7 +11,7 @@ App({
     console.log('processing to login')
     wx.login({
       success: (res) => {
-        console.log(res)
+      
         wx.request({
           url: host + 'login',
           method: 'POST',
@@ -19,7 +19,7 @@ App({
             code: res.code
           },
           success: (res) => {
-            console.log(res)
+            
             wx.setStorageSync('user_id', res.data.user_id)
             wx.setStorageSync('open_id', res.data.open_id)
           }

@@ -5,8 +5,6 @@ export default function eventListener(eventName, page, shop, item) {
   var date = new Date();
   var timestamp = Math.floor(date.getTime() / 1000);
 
-
-
   let event = {
     timestamp,
     description: eventName,

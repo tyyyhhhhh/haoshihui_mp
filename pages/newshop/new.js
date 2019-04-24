@@ -1,17 +1,15 @@
+import eventListener from "../../eventListener.js";
 var app = getApp()
 Page({
   data: {
     loading: false,
   },
 
-  onLoad: function () {
-    eventListener("newShop onLoad", this.route)
+  onShow: function () {
+    eventListener("onShow", this.route)
   },
 
   showPage(e) {
-    // console.log(data)
-    // const shop = data.shop;
-
     wx.navigateTo({
       url: `../shops/shops`
     });
@@ -34,8 +32,6 @@ Page({
       opening_hours: f.detail.value.opening_hours,
       phone_number: f.detail.value.phone_number,
     }
-
-    console.log(shop)
 
     let page = this;
 
@@ -65,8 +61,6 @@ Page({
     wx.switchTab({
       url: '/pages/shops/shops'
     });
-
-
       
   }
 })

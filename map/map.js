@@ -20,6 +20,10 @@ Page({
     
   },
 
+  onShow: function () {
+    eventListener("onShow", this.route)
+  },
+
 
   listenerBtnGetLocation: function (e) {
     console.log(e)
@@ -55,19 +59,15 @@ Page({
   },
 
   onLoad: function (options) {
-    eventListener("map onLoad", this.route)
+    
     const page = this;
     // Display toast when loading
-
 
     wx.showToast({
       title: 'Updating',
       icon: 'success',
       duration: 3000
     });
-
-
-
 
     wx.request({
       url: "https://haoshihui.wogengapp.cn/api/v1/shops",
@@ -97,15 +97,10 @@ Page({
             shops: shops,
             markers: markers
           });
-        console.log(markers)
+        // console.log(markers)
       }
     }),
-
-      // Update local data
 
       wx.hideToast();
   }
 });
-
-// Update local data
-//this.setData(app.globalData)
