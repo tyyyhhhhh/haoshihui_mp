@@ -1,7 +1,7 @@
 export default function eventListener(eventName, page, shop, item) {
   let url ="https://haoshihui.wogengapp.cn/api/v1/events"
   let thisPage = page
-  console.log(thisPage)
+  //console.log(thisPage)
   var date = new Date();
   var timestamp = Math.floor(date.getTime() / 1000);
 
@@ -14,7 +14,7 @@ export default function eventListener(eventName, page, shop, item) {
     user_open_id: wx.getStorageSync("open_id")
   }
 
-  console.log('Sending event',event)
+  //console.log('Sending event',event)
 
   wx.request({
     url: url,

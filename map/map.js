@@ -77,7 +77,7 @@ Page({
         'X-Customer-Email': wx.getStorageSync('email'),
       },
       success(res) {
-        console.log(res)
+        //console.log(res)
         const shops = res.data.shops;
         let markers = [];
 

@@ -8,7 +8,7 @@ Page({
   },
 
   getUserInfo: function (e) {
-    console.log(e)
+    //console.log(e)
     let userInfo = e.detail.userInfo;
     
     wx.setStorageSync('userInfo', userInfo);
@@ -41,7 +41,7 @@ Page({
         },
         data: { user: user },
         success: res => {
-          console.log(res)
+          //console.log(res)
           wx.setStorageSync('hasRegistered', true)
           wx.reLaunch({
             url: '/pages/shops/shops',
