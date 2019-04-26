@@ -1,24 +1,11 @@
 /* pages/shop/shop.wxss */
 
-.banner-image {
-  background-position: cover;
-  height: 100px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  color: white;
-}
-.banner {
-  color: white;
+.topimg {
   text-align: center;
-  height: 100vh-70px;
-  /* if you have a 70px navbar => height: calc(100vh - 70px); */
-  background-size: cover !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15px;
-  padding-bottom: 25px;
+}
+
+.reimg {
+  height: 160px;
 }
 
 .item-name {
@@ -62,6 +49,7 @@
 }
 .submit-tab {
   background-color:#053C5E;
+  text-align: center;
    position:fixed;
    left:0px;
    bottom:0px;
@@ -77,8 +65,8 @@
 }
 
 .add-button {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   position: absolute;
   right: 10px;
   bottom: 5px;

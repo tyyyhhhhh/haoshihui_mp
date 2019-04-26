@@ -19,6 +19,8 @@ Page({
     that.setData({shop:shop});
     const item = wx.getStorageSync('item');
     that.setData({ item: item });
+    let save = item.original_price - item.discount_price
+    that.setData({save: save});
     const email = wx.getStorageSync('email');
     that.setData({email:email});
     const customerAddress = wx.getStorageSync('address');
@@ -84,6 +86,12 @@ Page({
 
   },
 
+  back(e) {
+    wx.switchTab({
+      url: `../shops/shops`
+    });
+  },
+
   PayNow(e) {
     eventListener("Payment confirmed", this.route);
 
@@ -92,7 +100,7 @@ Page({
       });
    
   wx.showToast({
-    title: '下单成功',
+    title: 'Thank you',
     icon: 'success',
     duration: 7000
   })

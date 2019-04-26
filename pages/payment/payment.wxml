@@ -1,6 +1,6 @@
 <!--pages/payment/payment.wxml-->
 <view class="topnav">
-  <view class="active h2" href="#home">Deliverying to {{customerAddress}}</view>
+  <view class="active h2" bindtap="back">Back</view>
   <view class="customer-info">
     <!-- <view >customer's name</view> -->
     <view>{{email}}</view>
@@ -24,13 +24,13 @@
    <view class="item-price h5">Original Price: ¥ {{item.original_price}} </view>
       <view class="item-price h5">Discount Price: ¥ {{item.discount_price}} </view>
 
-  <view class="sum-total">Total price: ¥ {{item.discount_price}}</view>
+  <view class="sum-total">You could save: ¥ {{save}}</view>
 
 </view>
 
 <view class="submit-tab"> 
-  <view><image src="/images/shop-cart.png" class="icon"  /></view>
-  <view class="payment-button" bindtap="PayNow">下单</view>
+  <view><image src="/images/heart.png" class="icon"  /></view>
+  <view class="payment-button" bindtap="PayNow">Got it</view>
 </view>
 
 </view>
