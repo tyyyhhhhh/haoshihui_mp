@@ -1,15 +1,9 @@
 <!--pages/shop/shop.wxml-->
-<view class="shop-banner">
-  <view class="banner" style="background-image: linear-gradient(rgba(80,80,80,0.2), rgba(20,20,20,0.7)), url('{{avatar_url}}');">
-    <view class="banner-info"> 
-      <view class="title">{{name}}</view>
-      <view class="subtitle">{{description}}</view>
-      
-      <view class="subtitle">{{address}}</view>
-<view class="title" bindtap='listenerBtnCall'>call {{phone_number}}</view>
-    </view>
+
+  <view class="topimg">
+  <image class = "reimg" src="/images/ReduceFoodWaste.png"></image>
   </view>
-</view>
+
 
 <view wx:for="{{items}}" wx:for-item="item" wx:key="item.id"  bindtap="selectItem" data-item="{{item}}" class="order-card">
 
@@ -19,7 +13,7 @@
       <view class="item-name">{{item.name}}</view>
       <text class="paraph">{{item.description}}</text>
       <view class="item-price">¥ {{item.original_price}}</view>
-      <image src="/images/plus-button.svg" class="add-button" bindtap="addToCart"
+      <image src="/images/thumb.png" class="add-button" bindtap="addToCart"
 
           data-id="{{id}}" />
       </view>
@@ -28,5 +22,5 @@
 
 
 <view class="submit-tab">
-  <image src="/images/shop-cart.png" class="icon" bindtap="addToCart" />
+  <image src="/images/heart.png" class="icon" bindtap="addToCart" />
 </view>
